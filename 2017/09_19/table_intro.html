@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>테이블 기초</title>
+</head>
+<body>
+    <h2>테이블 만들기 연습</h2>
+    <table border="1"> <!-- 표를 만든다 -->
+        <tr> <!-- 행을 만든다 -->
+            <td>가</td> <td>나</td> <!-- 열에들어가는 하나의 데이터 -->
+        </tr>
+        <tr>
+            <td>다</td> <td>라</td> 
+        </tr>
+    </table><br />
+    <table border="1">
+        <tr><td>가</td><td>나</td></tr>
+        <tr>
+            <td colspan="2" align="center">다</td>
+            <!-- 열 속성에 colspan을 이용하여 행을 합친다,
+                열이 2개이므로 넣어주는 값도 2이다.
+                보기좋게 align을 이용하여 가운대 정렬-->
+        </tr>
+    </table><br />
+    <table border="1">
+        <tr>
+            <td rowspan="2">가</td>
+            <!-- rowspan을 이용하여 행의 입력한 값만큼의 행을 합친다. -->
+            <td>나</td> 
+        </tr><tr><td>다</td></tr>
+    </table><br />
+    <table border="1">
+        <tr>
+            <td>가</td><td rowspan="2">다</td>
+        </tr>
+        <tr><td>나</td></tr>
+    </table><br />
+    <table border="1">
+        <tr>
+            <td>1</td><td rowspan="2" colspan="3" align="center">4</td>
+        </tr>
+        <tr><td>2</td></tr>
+        <tr><td>3</td><td>5</td><td>6</td><td>7</td></tr>
+    </table>
+</body>
+</html>
