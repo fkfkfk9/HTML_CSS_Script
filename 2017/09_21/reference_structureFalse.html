@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic Page</title>
+    <style>
+        /*li의 첫번째의 자손 a경우 사용
+            만약에 first-child를 a에 붙인다면
+            모든 li의 자식 a들이 전부 적용 되므로 주의
+        */
+        li:first-child > a {color: red;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">주의 사항</a></li>
+        <li><a href="#">주의 사항</a></li>
+        <li><a href="#">주의 사항</a></li>
+        <li><a href="#">주의 사항</a></li>
+        <li><a href="#">주의 사항</a></li>
+    </ul>
+</body>
+</html>

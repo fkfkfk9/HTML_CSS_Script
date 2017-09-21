@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /* display는 none를 할 경우 해당 속성을 아예 지워바린다
+            스펜이나 디브를 사용할떄 인라인 블록 속성을 바꿔 줄 수도 있다.
+        */
+        #box{
+            display: inline;
+        }
+        #in{
+            display: block;
+        }
+        span {
+            width: 100px;
+            height: 50px;
+            background-color: aquamarine;
+            display: inline-block
+        }
+    </style>
+</head>
+<body>
+    <span id="in">더미 객체</span><span>더미 객체</span>
+    <div id="box">더미 객체</div>
+    <span>더미 객체</span>
+</body>
+</html>
