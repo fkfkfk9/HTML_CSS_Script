@@ -1,0 +1,12 @@
+﻿body {
+    background-color: lightblue;
+}
+
+h1{
+    color: navy;
+    margin: 20px;
+}
+/*css스타일엔 css파일을 만들어서 불러오는 익스터널 스타일
+    헤드에 선언하는 인터널 스타일
+    헤당 속성에서 바로 선언하는 인라인 스타일이 있다.
+*/
