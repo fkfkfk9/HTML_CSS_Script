@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tostring3</title>
+</head>
+<body>
+	<script>
+		var staff = "김상형 : ";
+		var salary = 320;
+        var bonus = 160;
+        //그냥 더하면 staff변수가 문자열이어서 뒤의 숫자변수까지
+        //문자형으로 변환하게 된다.
+        //괄호를 주어 인티저 형끼리 먼저 더하면 된다.
+        //숫자형 데이터를 문자열로 변환하려면 문자열과 더해주거나
+        //String(숫자변수)함수를 사용하여 바꾼다. 
+		document.write(staff + (salary + bonus) + "만원");
+	</script>
+</body>
+</html>
