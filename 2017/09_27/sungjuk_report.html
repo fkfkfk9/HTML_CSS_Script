@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>성적표</title>
+</head>
+<body>
+    <script>
+        //while에 true값을 줘서 계속 반복 시킨다.
+        while (1) {
+            //점수를 입력 받음
+            var score = prompt("점수를 입력하세요. ", "0~100");
+            //프롬프트에서 취소를 누르면 null값이 들어간다.
+            //이 후 종료
+            if (score == null) {
+                document.write("취소를 눌렀습니다.");
+                break;//종료
+            }
+            //아무것도 안치고 확인을 눌러 공란이 저장된 경우 처음 입력창으로
+            else if (score == "") alert("입력을 하지 않았습니다.");
+            //음수를 입력할 경우 처음 입력창으로
+            else if (score < 0) alert("입력한 숫자가 음수입니다.");
+            //100보다 큰 수를 입력할 경우 처음 입력창으로
+            else if (score > 100) alert("입력한 숫자가 100을 넘었습니다.");
+            //정확한 입력값을 넣었으므로 결과를 출력하고 종료된다.
+            else if (score >= 0 && score <= 100) {                
+                if (score >= 90 ) document.write("수");
+                else if (score >= 80 && score <= 89) document.write("우");
+                else if (score >= 70 && score <= 79) document.write("미");
+                else if (score >= 60 && score <= 69) document.write("양");
+                else document.write("가");               
+                break;//종료
+            }
+            //그 외의 경우는 숫자를 입력 안한 경우 뿐이다.
+            else alert("문자를 입력하였습니다.");
+        }               
+    </script>
+</body>
+</html>

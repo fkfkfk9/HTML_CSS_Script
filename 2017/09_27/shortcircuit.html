@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>shortcircuit</title>
+</head>
+<body>
+	<script>
+        var age = 18;
+        //나이가 19보다 어리다면 쇼트 서킷트의 기능에 
+        //의해 뒤의 컨펌은 동작하지 않는다.
+        //엔드 연산자는 이미 age에서 false가 된순간 더 이상 
+        //연산하지 않고 결과 값을 출력함
+        //쇼트 서킷트는 and연산에서 앞이 false면 연산을 끝낸다.
+        //or연산자 에서는 앞이 true면 무조건 true이기 때문에
+        //맨앞이 true면 연산이 끝난다.
+        //이 쇼트 서킷트 기능 때문에 중요한 내용을 앞으로 사용하여
+        //연산을 빨리 끝낼 수 있다.
+		if (age > 19 && confirm("술을 잘 마십니까?") == true) {
+			document.write("술집에 입장하십시오.");
+		} else {
+			document.write("집에 가서 쉬세요.");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>동물선택</title>
+</head>
+<body>
+    <script>
+        var animal = prompt("좋아하는 동물은? ", "다람쥐, 토끼, 호랑이, 사자 중 택1");
+        var select = "를 입력했습니다.";
+        var err = "는 저장된 동물에 없습니다.";
+        var str = "";
+		switch (animal) {
+            case "다람쥐":
+                str += animal + select;
+				break;
+            case "토끼":
+                str += animal + select;
+				break;
+            case "호랑이":
+                str += animal + select;
+                break;
+            case "사자":
+                str += animal + select;
+                break;
+			default:
+                str += animal + err;
+				break;
+        }
+        document.write(str);
+    </script>
+</body>
+</html>
