@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>breaklabel2</title>
+</head>
+<body>
+	<script>
+        /*
+            break 레이블명
+            이런 구문은 레이블이 지정된 구문을 한꺼번에 탈출한다.
+        */
+		iloop: //레이블명 세미콜론이 아니다
+		for (var i = 0; i < 3; i++) {
+			jloop://레이블명
+			for (var j = 0; j < 5; j++) {
+				document.write("i = " + i + ", j = " + j + "<br>");
+				if (i == 1 && j == 2) break iloop;
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>

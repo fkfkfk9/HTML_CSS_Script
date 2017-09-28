@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>trycatch</title>
+</head>
+<body>
+	<script>
+        /*
+            try는 실행이 되어었을 때 오류가 날지도 모르는 코드작성
+            catch문은 try문에서 오류가 발생 했을시 동작
+            finally구문은 try의 코드가 오류가 발생 하든 안하든
+            작성할때 사용 된다.
+        */
+		document.write("실행을 시작합니다.<br>");
+		try {
+			document.message("메시지입니다.<br>");
+		} catch(exception) {
+			alert("예외가 발생했습니다.");
+		}
+		document.write("실행을 완료하였습니다.<br>");
+	</script>
+</body>
+</html>

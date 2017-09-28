@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>throw</title>
+</head>
+<body>
+	<script>
+		// 라이브러리 내부
+		function func() {
+            if (true) throw "예외가 발생했습니다";
+            //throw "메세지" - 실행오류를 발생 시키는 기능
+		}
+		
+		// 라이브러리 사용
+		try {
+			func();	
+		} catch(exception) {
+			alert("이름 : " + exception.name + 
+				"\n메시지 : " + exception.message + 
+				"\n설명 : " + exception.description);
+		}
+		document.write("실행을 완료하였습니다.<br>");
+	</script>
+</body>
+</html>

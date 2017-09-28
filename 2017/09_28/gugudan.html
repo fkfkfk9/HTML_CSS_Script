@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>구구단</title>
+    <style>
+        table{
+            /*테이블을 여러개 만들었으므로 블럭성질을 인라인 성질로 바꾼다.*/
+            display:inline;            
+            background-color:cornflowerblue
+        }
+        td {
+            /*각각 행에 선을 그려준다.*/
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>   
+    <script>
+        for (var i = 2; i < 10; i++) {
+            //매 단마다 테이블을 만든다.
+            document.write("<table>");
+            //제목 부분
+            document.write("<tr><th>" + i + "단</th></tr>");
+            for (var j = 1; j < 10; j++) {
+                //곱하기 부분.
+                document.write("<tr><td>" + i + " x " + j + " = " + (i*j) + "</td></tr>");
+            }
+            document.write("</table>");            
+        }
+    </script>
+</body>
+</html>

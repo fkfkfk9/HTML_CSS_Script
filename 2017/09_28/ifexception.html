@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ifexception</title>
+</head>
+<body>
+	<script>
+        document.write("실행을 시작합니다.<br>");
+        //document.message명령어를 지원하면 true, 명령어가 없다면 false
+        //브라우져마다 지원하는 명령어가 다를 수 있으므로
+        //체크 해줘야 할 상황이 있다.
+		if (document.message) {
+			document.message("메시지입니다.<br>");
+		}
+		document.write("실행을 완료하였습니다.<br>");
+	</script>
+</body>
+</html>
