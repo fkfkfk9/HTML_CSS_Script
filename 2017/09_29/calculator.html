@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>계산기</title>
+    <!--JS파일을 불러온다.-->
+    <script src="function.js"></script>
+</head>
+<body>
+    <script>
+        /*무한 루프*/
+        while (1) {
+            //문자를 3개 입력 받는다 취소를 누르면 null값이 들어오므로 종료시킨다.
+            var num1 = prompt("계산기 입니다. 첫번째 숫자를 입력하세요.", "취소를 누르면 종료");
+            if (num1 == null) {
+                pnt("프로그램을 종료합니다.");
+                break;
+            }
+            var str = prompt("연산할 종류를 입력하세요.", "+,-,*,/ 중 택1");
+            if (str == null) {
+                pnt("프로그램을 종료합니다.");
+                break;
+            }
+            var num2 = prompt("두번째 숫자를 입력하세요.", "");
+            if (num2 == null) {
+                pnt("프로그램을 종료합니다.");
+                break;
+            }
+            //숫자를 입력해도 문자열이기 때문에 Number 함수로 변환 후 넘김
+            var result = calculator(Number(num1), str, Number(num2));
+            //결과 출력
+            alt(result);           
+        }
+    </script>
+</body>
+</html>

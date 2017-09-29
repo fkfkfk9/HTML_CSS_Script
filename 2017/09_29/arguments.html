@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>arguments</title>
+</head>
+<body>
+	<script>
+        /*함수의 전달인수를 주지 않아도 arguments에 자동 저장된다.
+        arguments.length로 배열의 길이를 파악하고 arguments[]배열로 사용*/
+		function total() {
+			var s = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				s += arguments[i];
+			}
+			return s;
+		}
+		document.write(total(2, 5, 3) + "<br>");
+		document.write(total(1, 5, 8, 8, 12, 14) + "<br>");
+	</script>
+</body>
+</html>

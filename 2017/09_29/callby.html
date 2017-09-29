@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>callby</title>
+</head>
+<body>
+	<script>
+        //call by value(값만 전달)
+		function byvalue(a) {
+            a = 9999;            
+        }
+        //call by reference(주소까지 전달)
+		function byref(a) {
+            a[0] = 9999;
+		}
+	
+		var int = 1000;
+		var ar = [1000, 2000, 3000];
+		
+		document.write("int = " + int + ", ar[0] = " + ar[0] + "<br>");
+		byvalue(int);
+        byref(ar);
+		document.write("int = " + int + ", ar[0] = " + ar[0] + "<br>");
+	</script>
+</body>
+</html>

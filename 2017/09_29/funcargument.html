@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>funcargument</title>
+</head>
+<body>
+	<script>
+        //익명함수
+		var add = function(a, b) {
+			return a + b;
+        }
+        //익명함수
+		var multi = function(a, b) {
+			return a * b;
+        }
+        //일반 함수
+        function calc(a, b, f) {//calc(2, 3, add)
+        //익명함수의 용도 함수자체를 변수로 함수로 넘길 수 있다.
+			return f(a, b);
+		}
+		document.write("2 + 3 = " + calc(2, 3, add) +"<br>");
+		document.write("2 * 3 = " + calc(2, 3, multi) +"<br>");
+	</script>
+</body>
+</html>

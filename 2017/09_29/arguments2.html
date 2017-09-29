@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>arguments2</title>
+</head>
+<body>
+	<script>
+		function total() {
+			var s = 0;
+			if (typeof(arguments[0]) == "string") {
+				s = "";
+			}
+			for (var i = 0; i < arguments.length; i++) {
+				s += arguments[i];
+			}
+			return s;
+		}
+		document.write(total(1, 2, 3) + "<br>");
+		document.write(total("니들이", " 게맛을", " 알어?") + "<br>");
+	</script>
+</body>
+</html>
