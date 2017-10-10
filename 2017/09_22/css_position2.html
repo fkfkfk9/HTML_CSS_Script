@@ -1,14 +1,16 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+	<title>absolute</title>
     <style>
+		/*자기 위치를 기준으로 위치 결정*/
         div.relative {
             position: relative;
             width: 400px;
             height: 200px;
             border: 3px solid #73AD21;
         }
-
+		/*부모의 속성으로 부터 위치가 결정 됨*/
         div.absolute {
             position: absolute;
             top: 80px;
@@ -21,13 +23,13 @@
 </head>
 <body>
 
-    <h2>position: absolute;</h2>
+    <h2>absolute</h2>
 
-    <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+    <p>일반 내용</p>
 
     <div class="relative">
-        This div element has position: relative;
-        <div class="absolute">This div element has position: absolute;</div>
+        relative 적용
+        <div class="absolute">absolute적용</div>
     </div>
 
 </body>
