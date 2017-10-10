@@ -1,0 +1,45 @@
+div.container {
+            /*어떤 플랫폼으로 접속하냐에 따라 화면크기가 다르므로
+                직접 사이즈를 설정하기보단 화면을 가득 채우게만 설정
+            */
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        header, footer {
+            padding: 1em;
+            color: white;
+            background-color: black;
+            /*앞서 사용된 float속성을 해제한다.*/
+           /* clear: left;*/
+            text-align: center;
+			border: 5px solid yellow;
+        }
+
+        nav {
+            /*인라인 블록 상관없이 마음대로 쓸수있게 한다.*/
+            float: left;
+            width: 160px;
+            margin: 0;			
+            padding: 1em;
+			background-color: purple;
+			text-align: center;
+			color: white;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                nav ul a {
+                    text-decoration: none;
+                }
+
+        article {            
+            border-left: 1px solid gray;
+            padding: 1em;
+            /*정해진 영역을 넘어가면 숨긴다.*/
+            overflow: hidden;
+			background-color: antiquewhite;
+        }

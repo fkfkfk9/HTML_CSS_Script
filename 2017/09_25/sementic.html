@@ -1,73 +1,30 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <style>
-        div.container {
-            /*어떤 플랫폼으로 접속하냐에 따라 화면크기가 다르므로
-                직접 사이즈를 설정하기보단 화면을 가득 채우게만 설정
-            */
-            width: 100%;
-            border: 1px solid gray;
-        }
-
-        header, footer {
-            padding: 1em;
-            color: white;
-            background-color: black;
-            /*앞서 사용된 float속성을 해제한다.*/
-           /* clear: left;*/
-            text-align: center;
-        }
-
-        nav {
-            /*인라인 블록 상관없이 마음대로 쓸수있게 한다.*/
-            float: left;
-            max-width: 160px;
-            margin: 0;
-            padding: 1em;
-        }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-                nav ul a {
-                    text-decoration: none;
-                }
-
-        article {
-            margin-left: 170px;
-            border-left: 1px solid gray;
-            padding: 1em;
-            /*정해진 영역을 넘어가면 숨긴다.*/
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="sementic.css" />
 </head>
 <body>
-
     <div class="container">
 
         <header>
-            <h1>City Gallery</h1>
+            <h1>대한민국</h1>
         </header>
 
         <nav>
             <ul>
-                <li><a href="#">London</a></li>
-                <li><a href="#">Paris</a></li>
-                <li><a href="#">Tokyo</a></li>
+                <li><a href="#">서울</a></li>
+                <li><a href="#">안양</a></li>
+                <li><a href="#">경주</a></li>
             </ul>
         </nav>
 
         <article>
-            <h1>London</h1>
-            <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+            <h1>서울</h1>
+            <p>대한민국의 수도</p>
+            <p>명동, 광화문, 남산타워 등이 유명하다.</p>
         </article>
 
-        <footer>Copyright &copy; W3Schools.com</footer>
+        <footer>fkfkfk9@naver.com</footer>
 
     </div>
 

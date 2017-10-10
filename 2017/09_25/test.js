@@ -1,8 +1,8 @@
 ﻿function outdate() {
-    var now = new Date();
-    document.write("현재 시간 : " + now);
+    var date = new Date();
+    document.write("현재 시간 : " + date);
 }
-function prt(a) {
-    a = "<b>" + a + "</b>";
+function prtb(str) {
+    str = "<b>" + str + "</b>";
     document.write("결과는 : " + a + "<br>");
 }
