@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>parseint test</title>
+</head>
+<body>
+	<script>
+		var hex = "0x3f"
+        document.write("0x3f = " + parseInt(hex, 16) + "<br>");
+        document.write("0x3f = " + parseInt(hex) + "<br>");
+        document.write("0x3f = " + Number(hex) + "<br>");
+
+        var oct = "037"
+        document.write("037 = " + parseInt(oct, 8) + "<br>");
+        //8진수인걸 표기 안하면 인식 못함
+        document.write("037 = " + parseInt(oct) + "<br>");
+        document.write("037 = " + Number(oct) + "<br>");
+		
+        var decimal = "12"
+        document.write("12(10) = " + parseInt(decimal, 8) + "<br>");
+		document.write("12(10) = " + parseInt(decimal, 10) + "<br>");
+		document.write("12(16) = " + parseInt(decimal, 16) + "<br>");
+	</script>
+</body>
+</html>

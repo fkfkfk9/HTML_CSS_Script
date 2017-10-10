@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>indexof</title>
+</head>
+<body>
+	<script>
+		var arr = ["나연", "사나", "모모", "다현", "채영", "쯔위", "미나", "모모"];
+		document.write("arr = " + arr + "<br>");
+		
+		var sana = arr.indexOf("사나");
+		document.write("사나는 " + sana + "번째에 있다. <br>");
+		
+		var momo  = arr.indexOf("모모");
+        document.write("모모는 " + momo + "번째에 있다. <br>");
+        //라스트인덱스오프는 뒤에서 부터 찾는다.
+		var momo = arr.lastIndexOf("모모");
+		document.write("모모는 뒤에서 " + momo + "번째에 있다. <br>");
+		//배열안에 값이 없다면 -1을 리턴해준다.
+		var yura = arr.indexOf("유라");
+		if (yura == -1) {
+			document.write("유라는 트와이스가 아니다.<br>");
+		}
+	</script>
+</body>
+</html>
