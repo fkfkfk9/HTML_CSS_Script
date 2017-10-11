@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>date</title>
+</head>
+<body>
+	<script>
+        var bday = new Date(1988, 11, 3);
+        //괄호안을 기준으로 시간을 받음
+		var date = new Date();
+        var day = (date.getTime() - bday.getTime()) / (86400 * 1000);
+        //현재시각에서 생일을 빼고 하루로 나눈다.
+        document.write("오늘은 태어난지 " + Math.floor(day) + "일 째입니다.");
+	</script>
+</body>
+</html>

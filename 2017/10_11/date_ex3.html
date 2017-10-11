@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ms secend</title>
+</head>
+<body>
+	<script>
+		var date = new Date();
+        var time = date.getTime();
+        //현재시스템의 날짜와 시간을 ms(밀리세컨드 초의 1/1000)로 전달한다.
+        alert(time);
+        time += (86400 * 1000 * 31);        
+        date.setTime(time);
+        document.write("한달 뒤는 " + date.toLocaleDateString() + "입니다.");
+	</script>
+</body>
+</html>

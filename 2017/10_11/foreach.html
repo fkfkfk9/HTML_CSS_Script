@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>foreach</title>
+</head>
+<body>
+	<script>
+		var score = [88, 99, 33, 55, 8, 77, 100, 68, 45, 23];
+		var sum = 0;
+		score.forEach(function(arr_num) {
+            sum += arr_num;
+        });
+        //익명함수를 이용해 for작업을 할 수 있다.
+        
+		document.write("sum  = " + sum + "<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>reg_search</title>
+</head>
+<body>
+	<script>
+		var str = "qweq asd234 q-356 Q-123 q-238AH Q-123h q-442AH Q-AH q-224H";
+        var result = str.search(/"[qQ]-[0-7]*A?H/);
+        //찾아서 인덱스위치를 반환
+		document.write(result + "<br>");
+	</script>
+</body>
+</html>

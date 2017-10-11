@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>대소문자 상관없이 정렬</title>
+</head>
+<body>
+	<script>
+        var country = ["Korea", "England", "india", "Spain"];
+        document.write("정렬 전 : " + country + "<br>");
+		
+		country.sort(function (strl, strr) {
+            var strl2 = strl.toLowerCase();
+            var strr2 = strr.toLowerCase();
+            //무슨 문자열이 들어왔던 소문자로 변경 시킨다.
+            //소문자로 비교하기때문에 동등하다.
+            if (strl2 < strr2) return -1;
+            if (strl2 > strr2) return 1;
+            //음수로 리턴하는가 양수로 리턴하는가에 따라 비교
+			return 0;
+		});
+        document.write("정렬 후 : " + country + "<br>");
+	</script>
+</body>
+</html>
