@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dom</title>
+</head>
+<body>
+	<h1 id="tname">테스트용 제목입니다.</h1>
+	<div>테스트용 <b>문장</b>입니다.</div>
+	<script>
+        var tname = document.getElementById("tname");
+        document.write("노드 타입 = " + tname.nodeType + 
+            " ,노드 이름 = " + tname.nodeName +
+            " ,노드 값 = " + tname.nodeValue + "<br>");
+
+        var text = tname.firstChild;
+		document.write("노드 타입 = " + text.nodeType + 
+			" ,노드 이름 = " + text.nodeName +
+			" ,노드 값 = " + text.nodeValue + "<br>");
+	</script>
+</body>
+</html>

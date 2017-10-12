@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>addimg</title>
+</head>
+<body>
+	<p id="pid">테스트용 문장</p>
+	<script>
+        var pid = document.getElementById("pid");
+        //속성은 차일드가 아니다.
+        //고로 child관련 명령어로 속성을 제어할 수 없다.
+		var img = document.createElement("img");
+		
+        // 1.속성 직접 대입
+        img.src = "test.jpg"
+        img.width = "300";
+        img.height = "200";
+		
+		// 2.속성 설정 메서드 호출
+        //img.setAttribute("src","test.jpg");
+		
+		// 3.속성 노드를 만들어 붙이기
+		//var src = document.createAttribute("src");
+		//src.nodeValue="test.jpg";
+		//img.setAttributeNode(src);
+		
+        pid.appendChild(img);
+	</script>
+</body>
+</html>

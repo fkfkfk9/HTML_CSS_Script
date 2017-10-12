@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>timer</title>
+</head>
+<body>
+	<p id="now">현재 시간</p>
+	<script>
+        function stop() {
+            clearInterval(timer);
+        }
+        function nowtime() {
+            //document객체 : HTML문서나 문서의 내용을 제어하는 기능제공
+            //getElementByid는 HTML문서상에 바꾸고싶은 부분의 아이디를 입력하면
+            //해당 부분 제어가능 즉 아래 줄은 p태그를 제어하게 된다.
+            var now = document.getElementById("now");
+            now.innerHTML = (new Date()).toLocaleString();
+            //innerHTML은 해당 id의 태그안에 내용을 읽거나 쓴다.
+        }
+        //setInterval("실행코드", 시간(ms))
+        //1초마다 tick호출
+        var timer = setInterval("nowtime()", 1000);
+        nowtime();
+	</script>
+    <input type="button" value="STOP" onclick="clearInterval(timer)" />
+</body>
+</html>

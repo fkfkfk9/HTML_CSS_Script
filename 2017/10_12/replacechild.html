@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>replacechild</title>
+</head>
+<body>
+	<p>테스트용 문장1</p>
+	<p id = "pid">테스트용 문장2</p>
+	<p>테스트용 문장1</p>
+	<script>
+		var h = document.createElement("h1");
+		var str = document.createTextNode("교체된 내용");
+		h.appendChild(str);
+
+        var pid = document.getElementById("pid");
+        document.body.replaceChild(h, pid);
+        //(새로운것, 기존의것)새로운 내용으로 체인지 시킨다.
+	</script>
+</body>
+</html>

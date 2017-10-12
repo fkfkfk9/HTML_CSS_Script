@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>노드 삭제</title>
+</head>
+<body>
+	<p>1문단.</p>
+	<p id = "pid">2문단.</p>
+	<p>3문단.</p>
+	<script>
+        var pid = document.getElementById("pid");
+        //부모계층까지 가서 자식을 삭제해야한다.
+        pid.parentNode.removeChild(pid);
+	</script>
+</body>
+</html>

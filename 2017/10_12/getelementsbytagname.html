@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getelementsbytagname</title>
+</head>
+<body>
+	<p>테스트용 문장1</p>
+	<p>테스트용 문장2</p>
+	<div>
+		<p>테스트용 문장3</p>
+		<p>테스트용 문장4</p>
+	</div>
+	<hr>
+	<script>
+        var pid_arr = document.getElementsByTagName("p");
+        document.write("문단 개수 : " + pid_arr.length + "<br>");
+        for (var i in pid_arr) {
+            document.write(i + "번째 문단 : " + pid_arr[i].firstChild.nodeValue + "<br>");
+		}
+	</script>
+</body>
+</html>
