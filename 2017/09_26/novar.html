@@ -2,14 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>novar</title>
+	<title>var가 없을 경우 전역변수</title>
 </head>
 <body>
 	<script>
 		//var score = 100;
         function func() {
             //var 키워드를 생략하고 변수를 선언할 경우에는 전역변수로 인식
-			score = 77;//데이터형을 생략하고 선언 가능
+			score = 88;//데이터형을 생략하고 선언 가능
 			document.write("함수안 score = " + score + "<br>");
 		}
         func();

@@ -6,14 +6,18 @@
 </head>
 <body>
 	<script>
-		a = 2;
-		b = "2";
-		if (a == b) {
+		num1 = 8;
+		num2 = "8";
+		//==연산은 데이터 타입을 자동으로 같게 한다.
+		//즉 데이터 타입에 관계없이 값만 같으면 된다.
+		if (num1 == num2) {
 			document.write("== 비교 : 같음<br>");
 		} else {
 			document.write("== 비교 : 다름<br>");
 		}
-		if (a === b) {
+		//===은 데이터 타입까지 비교해준다.
+		//즉 포멧을 맞추지 못하면 다른걸로 취급된다.
+		if (num1 === num2) {
 			document.write("=== 비교 : 같음<br>");
 		} else {
 			document.write("=== 비교 : 다름<br>");
