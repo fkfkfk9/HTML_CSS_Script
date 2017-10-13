@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Event Demo</title>
+</head>
+<body>
+    <p id="pid">이벤트실습</p="">
+    <script>
+        function pidClick() {
+            alert("클릭을 하였습니다.");
+            pid.onclick = null;//한번 클릭 후 이벤트 해제
+        }
+        var pid = document.getElementById("pid");
+        pid.onclick = pidClick;//이벤트 설정(등록)작업
+        //이벤트를 호출하는게 아니라 설정하기 때문에()를 안한다.
+
+        /*pid.onclick = function () {
+            alert("클릭을 하였습니다.");
+        }익명함수*/
+    </script>
+</body>
+</html>

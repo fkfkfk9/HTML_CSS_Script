@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>listener</title>
+</head>
+<body>
+	<h3 id="hid">Click</h3>
+	<script>
+        function hidClick() {
+			alert("클릭했습니다.");
+		}
+        function hidClick2() {
+			alert("또 클릭했습니다.");
+		}
+        var hid = document.getElementById("hid");
+        //핸들러를 복수로 등록 가능함
+        hid.addEventListener('click', hidClick);
+        hid.addEventListener('click', hidClick2);
+	</script>
+</body>
+</html>

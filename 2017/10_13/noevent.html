@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>event무시</title>
+</head>
+<body>
+	<p><a id="link" href="http://fkfkfk9.github.io">나의 블로그</a>로 이동</p>
+	<script>
+		var link = document.getElementById("link");
+		link.onclick = function() {
+			return false;
+		}
+	</script>
+</body>
+</html>

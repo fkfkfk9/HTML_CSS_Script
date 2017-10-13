@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jqueryready</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script>
+        //$(함수)를 이용할 경우
+        //온로드와 비슷한 성격이어서 태그들을 먼저 다 읽고
+        //코드를 읽는다. 즉 먼저 정의해도 태그에 영향이 없다.
+		$(function() {
+			$('h1').css('background', 'gold');
+		});
+	</script>
+</head>
+<body>
+	<h1>Hello JQuery</h1>
+</body>
+</html>

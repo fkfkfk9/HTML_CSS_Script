@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bubbling</title>
+</head>
+<body>
+	<div id="divid">
+		<span id="spanid">클릭하세요</span>
+	</div>
+	<script>
+        var div = document.getElementById("divid");
+        divid.onclick = function() {
+			alert("div를 클릭했습니다.");
+        }
+        //div 안에 span이 포합되어 있어 span이벤트 클릭시 둘다 적용
+        var spanid = document.getElementById("spanid");
+        spanid.onclick = function(event) {
+            alert("span을 클릭했습니다.");
+            //stopPropagation()을 사용하면 다음 이벤트를 하지않고 종료
+            //event.stopPropagation();
+		}
+	</script>
+</body>
+</html>

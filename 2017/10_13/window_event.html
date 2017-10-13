@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>window event</title>
+</head>
+<body>
+	<p>Goods Image</p>
+	<p id="pid">이미지<img src="../10_12/test.jpg" width="300" height="200"/></p>
+	<script>
+        //클라이언트가 서버에 자료를 요쳥하면 코드가 먼저오고 
+        //코드에 이미지같은 용량이 큰걸 다시 서버에 받을동안 로딩이 진행되므로
+        //페이지가 넘어오는대 도착하는 시간이 각기 다르다.
+        //로딩은 모든 자료가 넘어온 이후 할 작업을 의미한다.
+        window.onload = function () {
+            alert("로드 완료");
+        }
+        /*window.onunload = function () {
+            alert("BYE BYE");
+        //페이지를 나가면서 저장해야할 자료가 있다거나 필요한 작업이 있을때
+        }*/
+        window.onbeforeunload = function () {
+            return "정말 나가시겠습니까?";
+            //페이지를 정말 나갈건지 확인하는 작업
+        }/*윈도우창 크기를 변경할때마다 발생
+        window.onresize = function () {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = window.innerWidth + " * " + window.innerHeight;
+        }
+        onresize();*/
+        window.oncontextmenu = function () {//오른쪽 클릭 금지
+            return false;
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mouseDown</title>
+</head>
+<body>
+	<h3 id="hid">마우스 버튼을 누르세요</h3>
+	<script>
+		function mouseDown(event) {
+			alert("x = " + event.clientX + ", y = " + event.clientY);
+		}
+        var hid = document.getElementById("hid");
+        hid.onmousedown = mouseDown;
+	</script>
+</body>
+</html>
