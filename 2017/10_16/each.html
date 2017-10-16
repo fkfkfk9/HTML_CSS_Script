@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>each</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h2>테스트용 문단1</h2>
+	<h2>테스트용 문단2</h2>
+	<h2>테스트용 문단3</h2>
+	<h2>테스트용 문단4</h2>
+	<h2>테스트용 문단5</h2>
+	<script>
+        //jQuery()의 메서드 중에서는 매개변수의 인수로
+        //function(){}익명함수로 사용하는게 있다.
+        var arrCol = ['orange', 'red', 'aquamarine', 'blue', 'pink'];
+		$('h2').each(function(index, item) {
+            $(item).css('background', arrCol[index]);
+		});
+	</script>
+</body>
+</html>

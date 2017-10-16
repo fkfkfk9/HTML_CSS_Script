@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>firstfilter</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>데헤아
+		<li>필존스
+		<li>루크쇼
+		<li>발렌시아
+		<li>마티치
+		<li>포그바
+		<li>래쉬포드
+		<li>므키타리안
+		<li>루카쿠
+	</ul>
+	<script>
+        //$('li')모든 li태그 선택
+        //$('li:first'), ('li:last')를 합쳐서 사용
+        $('li:first, li:last').css('background', 'gold');
+        //인덱스가 5인 li선택 인덱스는 0부터 즉 6번째
+        $('li:eq(5)').css('background', 'aquamarine');
+        //인덱스가 4 미만 즉 0,1,2,3 까지
+		$('li:lt(4)').css('font-weight', 'bold');
+	</script>
+</body>
+</html>

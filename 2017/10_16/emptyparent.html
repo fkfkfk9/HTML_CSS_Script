@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>emptyparent</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p></p><!--p:empty의 해당 아무내용이 없다.-->
+	<hr />
+	<p> </p><!--공백문자가 있으면 엠프티가 아니다.-->
+	<hr />
+	<p>테스트용 문단입니다.</p><!--텍스트가 자식으로 있다.-->
+	<script>
+        $('p:empty').css('border', 'solid orange 5px');
+        //자식을 가지고 있는 p태그 선택
+		$('p:parent').css('background', 'gold');
+	</script>
+</body>
+</html>

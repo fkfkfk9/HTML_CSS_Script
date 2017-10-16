@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>eachfind</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>문단 안에 <strong>테스트용 강조</strong> 표시가 있다.</p>
+	<p>이 문단도 <span><strong>마찬가지로 강조</strong></span>문장이 있다.</p>
+	<div>디비전 안에 <strong>테스트용 강조</strong> 표시가 있다.</div>
+    <p>문단 안에 매우 길고 긴~~~~~~ <strong>테스트용 강조</strong> 표시가 있다.</p>
+	<script>
+        /*
+        $('p').each(function (index) {
+            //alert($(this).text());
+			if ($(this).text().length < 25) {
+                $(this).find('strong').css('background', 'gold');
+			}
+		});*/
+        //find는 태그안의 모든걸 검색하고 children은 태그의 자식만 검색
+        $('p').each(function (index) {
+            if ($(this).text().length < 25) {
+                $(this).children('strong').css('background', 'gold');
+            }
+        });
+	</script>
+</body>
+</html>

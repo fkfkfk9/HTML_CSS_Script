@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>childselector</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h2>문단 안에 <a>자식태그 문장</a> 이 있다.
+	두 번째 <span><a>후손태그 문장</a></span>은 손자이다.</h2>
+	<script>
+        //자식선택자. 부모 h2태그의 자식태그인 a태그를 선택하라
+        $('h2 > a').css('border', 'solid');
+        //후손(자식포함)선택자. h2태그의 자손중 a태그를 선택하라
+		$('h2 a').css('background', 'gold');
+	</script>
+</body>
+</html>

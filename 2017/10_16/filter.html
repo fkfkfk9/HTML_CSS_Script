@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>filter</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p class="test">테스트용 문단0</p>
+	<p>테스트용 문단1</p>
+	<p class="test">테스트<strong>용</strong> 문단2</p>
+	<p class="test">테스트용 문단3</p>
+	<p>테스트용 문단4</p>
+	<script>
+        //홀수를 찾아야 하므로 0부터 시작하여 홀수번째 p만 검색한다.
+        //<문단1><문단3>중에서 contains(1)은 1이 들어간것을 찾는것이다.
+        $('p:odd').filter(':contains(1)').css('background', 'gold');
+        $('p:even').filter(function (index) {
+            //익명함수를 확용할 시 리턴값이 있다.
+            //익명함수 안의 index는 필터로 검색된 후인 0,2,4 3개 기준이다.
+			if (index == 2) return true;
+			else return false;
+        }).css('background', 'pink');
+        //find는 단순히 찾는 용도이고 필터는 익명함수까지 사용할 수 있다.
+        $('p').filter('.test').find('strong').css('background', 'aquamarine');
+        $('p').filter('.test').css('border', 'solid orange 5px');
+	</script>
+</body>
+</html>

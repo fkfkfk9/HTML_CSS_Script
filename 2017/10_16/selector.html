@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>selector</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h1>테스트용 h1문장</h1>
+	<h2 id="hid">ID테스트용 h2문장</h2>
+	<h2 class="hclass">CLASS테스트용 h2문장</h2>
+	<script>
+		$('*').css('background', 'gold');
+        $('h1').css('color', 'aquamarine');
+        $('#hid').css('color', 'orange');
+        $('.hclass').css('color', 'white');
+	</script>
+</body>
+</html>
