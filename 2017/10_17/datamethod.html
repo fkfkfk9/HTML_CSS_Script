@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>datamethod</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p><img src="test.jpg" /></p>
+	<hr />
+	<script>
+        //태그의 사용자가 필요한 속성과 값을 숨겨놓음
+		$('p').data("camera", "canon 650d");
+		$('p').data("iso", 200);
+		document.write("장비 : " + $('p').data("camera") + "<br/>");
+		document.write("ISO 감도 : " + $('p').data("iso") + "<br/>");
+	</script>
+</body>
+</html>

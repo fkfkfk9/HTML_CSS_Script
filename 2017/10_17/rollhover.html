@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>롤오버 방식</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+    <style>
+        .enter { background:lime; }
+    </style>
+</head>
+<body>
+	<h2>테스트용 <b>문단</b> 입니다.</h2>
+	<script>
+        //mouseenter은 마우스오버와 기능이 같지만 
+        //버블링 효과를 무시한다.
+        //즉 자식과 부모가 나뉘어저 마우스오버가
+        //두가지 이벤트를 동시에 가져올 경우를 말한다.
+		/*$('h2').mouseenter(function() { 
+			$(this).css('background', 'lime');
+        });
+        $('b').mouseenter(function () {
+            $(this).css('background', 'gold');
+        });
+		$('h2, b').mouseleave(function() { 
+			$(this).css('background', 'white');
+        });*//*
+        $('h2').hover(//롤오버 기능
+            function () { $(this).css('background', 'lime') },
+            function () { $(this).css('background', 'white') }
+        );//이런식의 작업은 권장하지 않는다 스타일은 따로 작업한다.
+        */
+        $('h2').hover(
+            function () { $(this).addClass('enter') },
+            function () { $(this).removeClass('enter') }
+        );
+	</script>
+</body>
+</html>

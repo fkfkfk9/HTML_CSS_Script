@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>preventdefault</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p><a href="http://fkfkfk9.github.io">나의 블로그</a>로 이동</p>
+	<script>
+		$('a').click(function(event) {
+            event.preventDefault();
+            //이벤트의 기본처리를 금지한다.
+            //즉 a태그의 기능이 무시되고 링크된 사이트로 가지못함
+            //return false와 동일
+		});
+	</script>
+</body>
+</html>

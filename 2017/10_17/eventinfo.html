@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>eventinfo</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div style="width:333px;height:222px;background-color:gold;"></div>
+	<script>
+		$('div').mousedown(function(event) { //event는 이벤트 객체
+            alert("위치: (" + event.pageX + " ," + event.pageY + ")\n" +
+                //pageX pageY는 문서 좌상단을 기준으로한 마우스의 좌표
+                "버튼:" + event.button + 
+                //button눌러진 마우스 버튼 0:왼쪽클릭 1:휠클릭 2:오른쪽클릭
+                "\nCtrl:" + event.ctrlKey + "\nShift:" + event.shiftKey);
+                //ctrlKey shiftKey 조합된 키의 상태
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>clone</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div>
+		<p>문단0</p>
+		<p class="para">문단1<span onclick="alert()">(테스트)</span></p>
+		<p>문단2</p>
+		<p>문단3</p>
+	</div>
+	<script>
+        //clone는 후손까지 복사 
+        //이벤트 핸들러나 데이터는 복사하지 않는대
+        //true를 전달하면 추가 데이터도 복사
+        //실제 테스트론 true를 안줘도 복사됨
+		var para = $('p.para').clone();
+		$('div').append(para);
+	</script>
+</body>
+</html>

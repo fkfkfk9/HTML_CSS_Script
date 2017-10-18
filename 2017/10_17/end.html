@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>end</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h2>테스트용 제목0</h2>
+	<h2>테스트용 제목<span>1</span></h2>
+	<h2>테스트용 제목<span>2</span></h2>
+	<h2>테스트용 제목3</h2>
+	<h2>테스트용 제목4</h2>
+    <p id="pid">테스트용 문단1</p>
+    <p>테스트용 문단2</p>
+    <p>테스트용 문단3</p>
+	<script>
+		$('h2').filter(':even').css('background', 'gold').//메서드체인
+		end().filter(':has(span)').add('h2:first').css('border', 'solid');
+        //end는 마지막 선택자인 h2로 다시 선택하는걸 의미한다.
+        //add는 선택자에 추가 선택을 해준다.
+        $('#pid').nextAll().addBack().css('background', 'aquamarine');
+        //nextall은 선택한 id이후의 모든것을 선택하고 addback는 선택한것에
+        //선택자를 추가하므로 id를 포함한 이후의 것을 말한다.
+	</script>
+</body>
+</html>

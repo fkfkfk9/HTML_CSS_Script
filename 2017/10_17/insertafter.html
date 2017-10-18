@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>insertafter</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<style>
+		div { text-indent:20px; }
+	</style>
+</head>
+<body>
+	<h2>문단 삽입 테스트</h2>
+	<div>
+		<p>테스트용 문단1</p>
+		<p>테스트용 문단2</p>
+		<p>테스트용 문단3</p>
+	</div>
+	<script>
+        var para1 = $('<p>추가된 문단1</p>').css('font-weight', 'bold');
+        var para2 = $('<p>추가된 문단2</p>').css('font-weight', 'bold');
+        var para3 = $('<p>추가된 문단3</p>').css('font-weight', 'bold');
+        var para4 = $('<p>추가된 문단4</p>').css('font-weight', 'bold');
+        var div = $('div');
+        //div의 자식으로 마지막 자식으로 추가
+        para1.appendTo(div);
+        //처음 자식으로 추가
+        para2.prependTo(div);
+        //자식이 아님 div형제로서 뒤에 추가
+        para3.insertAfter(div);
+        //자식이 아님 div형제로서 앞에 추가
+		para4.insertBefore(div);
+	</script>
+</body>
+</html>

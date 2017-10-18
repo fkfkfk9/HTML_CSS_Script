@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>로딩후 적용</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<script>
+        //html문서 로딩이 완료된 이후 다음구문이 동작된다.
+        //document객체의 ready는 이벤트는 문서가 완전히 
+        //로드된 이후 발생하도록 되어있음
+        //ready는 태그를 먼저 읽고 진행되는대
+        //태그를 다 읽어도 이미지나 비디오는 다운로드 중일수 있다.
+        //이런경우 이미지나 비디오에 load이벤트를 줘야 
+        //다운로드 완료시점을 알 수 있다.
+		$(document).ready(function() {
+			$('h2').css('background', 'gold');
+		});
+	</script>
+	<h1>제목입니다.</h1>
+	<h2>문단입니다.</h2>
+</body>
+</html>

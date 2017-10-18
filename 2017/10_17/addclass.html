@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>addclass</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<style>
+		.test { background-color:gold; }
+        .pclass { color:aqua; }
+	</style>
+</head>
+<body>
+	<h2>문단입니다.</h2>
+    <h4 class="pclass">테스트용 제목 입니다.</h4>
+    <p class="pclass">테스트용 문단 입니다.</p>
+	<script>
+        //태그에 클래스를 부여한다.
+        $('h2').addClass('test');
+        //클래스 제거
+        $('p').removeClass('pclass');
+	</script>
+</body>
+</html>
