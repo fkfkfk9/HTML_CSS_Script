@@ -6,10 +6,13 @@
 </head>
 <body>
 	<script>
-		var arScore = [88, 78, 96, null, 23];
-		for (var st = 0; st < 5; st++) {
-			if (arScore[st]  == null) continue;
-			document.write(st + "번째 학생의 성적 : " + arScore[st] + "<br>");
+		var arr = [88, 78, 96, null, 23];
+		for (var i = 0; i < 5; i++) {
+			if (arr[i]  == null) continue;
+			//continue 여기까지만 수행하고 i++진행
+			//즉 작업은 수행하지 않지만 탈출하는게 아닌
+			//다음 루프로 넘어감
+			document.write("arr[" + i + "] : " + arr[i] + "<br>");
 		}
 	</script>
 </body>
