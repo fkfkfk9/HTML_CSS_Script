@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>애니메이션효과</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<button type="button" id="btn1">hide</button>
+	<button type="button" id="btn2">show</button>
+	<button type="button" id="btn3">slide up</button>
+	<button type="button" id="btn4">slide down</button>
+	<button type="button" id="btn5">fade out</button>
+	<button type="button" id="btn6">fade in</button>
+	<button type="button" id="btn7">fade To</button>
+    <button type="button" id="btn8">toggle</button>
+    <button type="button" id="btn9">slide toggle</button>
+    <button type="button" id="btn10">fade Toggle</button>
+    <button type="button" id="btn11">queue</button>
+    <button type="button" id="btn12">queue2</button>
+	<h1>애니메이션 대상</h1>
+	<hr />
+	<script>
+		$('#btn1').click(function() { $('h1').hide('slow'); });
+		$('#btn2').click(function() { $('h1').show('slow'); });
+		$('#btn3').click(function() { $('h1').slideUp('slow'); });
+		$('#btn4').click(function() { $('h1').slideDown('slow'); });
+		$('#btn5').click(function() { $('h1').fadeOut('slow'); });
+		$('#btn6').click(function() { $('h1').fadeIn('slow'); });
+        $('#btn7').click(function () { $('h1').fadeTo('slow', 0.5); });
+        $('#btn8').click(function () { $('h1').toggle('slow'); });
+        $('#btn9').click(function () { $('h1').slideToggle('slow'); });
+        $('#btn10').click(function () { $('h1').fadeToggle('slow'); });
+        //동기적으로 실행 애니메이션 효과가 끝난후 알라트 작업
+        $('#btn11').click(function () {
+            $('h1').toggle(2000, function () {
+                alert("애니메이션이 끝났습니다.");
+            });
+        });//$('h1').toggle();alert(); 비동기적 알라트가 먼저 실행된다.
+        //위와 같은의미
+        $('#btn12').click(function () {
+            $('h1').toggle({
+                duration: 2000,
+                complete: function () {
+                    alert("애니메이션이 끝났습니다.");
+                }
+            });
+        });
+        //동기적: 자원을 점유한다. 비동기적: 자원을 점유하지 않는다.
+	</script>
+</body>
+</html>
