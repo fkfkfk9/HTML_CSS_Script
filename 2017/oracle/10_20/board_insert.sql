@@ -1,2 +1,20 @@
 ----------------------- BOARD에 데이터 넣기 ----------------------------
-INSERT INTO board values(1, "");
+INSERT INTO board values(1, 'check', '유종현', 
+'입력받을 데이터의 조건을 넣고 체크하여 범위 밖의 데이터는 입력받지 않는다.',
+'1111', sysdate, 0);
+INSERT INTO board values(2, 'not null', '박지성', 
+'컬럼에 데이터를 반드시 입력해야 할 때 사용',
+'0000', '2017/10/19', 0);
+INSERT INTO board values(3, 'UNIQUE', '김연아', 
+'컬럼에 고유한 값을 지정할 때, 동일한 데이터가 중복이 불가능하다.',
+'3333', '2017/10/19', 0);
+INSERT INTO board values(4, 'PRIMARY KEY', '서장훈', 
+'NOTNULL + 데이터 중복방지 + 테이블당 한개만 생성가능',
+'4444', sysdate, 0);
+INSERT INTO board values(5, 'FOREIGN KEY', '박찬호', 
+'참조키 다른 테이블의 데이터를 참조하여 데이터의 유효성을 확인한다.',
+'2222', '2017/10/19', 0);
+INSERT INTO board values(6, 'DEFAULT', '유종현', 
+'값을 넣지 않았을 때 NULL이 들어가는게 아니라 디폴트 설정해놓은 값이 들어간다.',
+'8888', sysdate, 0);
+---------------------------------------------------------------------------
