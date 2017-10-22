@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery_css</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h1 style="color:orange;background-color:gold;">문단</h1>
+	<hr />
+    <h3>오브젝트 테스트용 제목</h3>
+    <p>테스트용 문단1</p>
+    <p id="pid2">테스트용 문단2</p>
+    <p id="pid">테스트용 문단3</p>
+	<script>
+        /*
+            하나의 태그에 여러가지 스타일속성이 사용되었을 때
+            배열로 읽어오는 방법
+        */
+        //props의 구조: color:orange, backgroundColor:gold
+        var props = $('h1').css(['color', 'backgroundColor']);
+        //선택자의 each를 쓰던것과는 틀리다.
+        //여기서는 jQuery라이브러리를 사용하는것 문법의 형식이다름
+        //$.each(배열, 익명함수)
+		$.each(props, function(prop, value) {
+			document.write(prop + " : " + value + "<br />");
+        });
+        //css메소드에 익명함수 사용가능
+        var arrCol = ['pink', 'gold', 'gray'];
+        $('p').css('color', function (index, style) {
+            return arrCol[index];
+        });
+        //오브젝트로 넣어서 설정 할 수 있다
+        var obj = {
+            color: 'orange',
+            backgroundColor: 'aquamarine',
+            border: 'solid black'
+        };
+        $('h3').css(obj);
+
+        $('#pid').css('fontSize', 40);
+        $('#pid').css('border', 'solid green 5px');
+        document.write($('#pid').css('fontSize') + "<br/>");
+        //태그에 여러가지 스타일을 배열형태로 한번에 적용 가능
+        $('#pid2').css({
+            fontSise: 33,
+            backgroundColor: 'pink',
+            border: 'solid red 3px'
+        });
+	</script>
+</body>
+</html>

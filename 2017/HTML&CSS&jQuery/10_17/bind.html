@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bind</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h1>테스트용 제목입니다.</h1>
+	<h1>클릭하세요.</h1>
+    <p>테스트용 문단 입니다.</p>
+    <p>클릭하세요.</p>
+    <p>CLICK CLICK</p>
+    <h3>1회성 클릭 테스트용 제목</h3>
+	<script>
+        $('h1').bind('click', function () { alert("클릭했습니다."); $(this).unbind('click');});
+        //이벤트명, 핸들러를 인수로 사용
+        //unbind는 이벤트를 1회성으로 만들어준다 클릭하면 이벤트를 없앤다.
+        $('p').bind({//바인드는 배열형태의 객체도 인수로 사용할 수 있다.
+            click: function () { alert("클릭했습니다."); },
+            mouseenter: function () { $(this).css('background', 'lime'); },
+            mouseleave: function () { $(this).css('background', 'white'); }
+        });//복수의 이벤트를 한번에 등록 할때 사용
+        $('h3').one('click', function () {//1회용 이벤트 메서드
+            alert("클릭했습니다.");
+        });
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>node</title>
+</head>
+<body>
+	<p>형</p><p id="pid">여기가 <span>본인이</span> 있는곳이다.
+		<a href="http://fkfkfk9.github.io">나의 블로그</a>
+		<img src="test.jpg" width="200" height="100" /></p><p>동생</p>
+	<hr>
+	<script>
+        var pid = document.getElementById("pid");
+        //마지막 자식
+        document.write("막내 자식 = " + pid.lastChild.nodeName + "<br>");
+        //부모
+        document.write("부모 = " + pid.parentNode.nodeName + "<br>");
+        //같은 부모를 둔 태그
+        document.write("형 = " + pid.previousSibling.firstChild.nodeValue + "<br>");
+        //같은대 더 나중에 나온 태그
+        document.write("아우 = " + pid.nextSibling.firstChild.nodeValue + "<br>");
+        //최상위의 부모인 도큐먼트
+        document.write("루트(전체문서) = " + pid.ownerDocument.nodeName + "<br>");
+        document.write("<b>전체 자식 노드</b> <br>");
+        for (var i = 0; i < pid.childNodes.length; i++) {
+            document.write(i + "번째 자식 nodeName =" + pid.childNodes[i].nodeName + "<br>");
+            document.write(i + "번째 자식 nodeValue =" + pid.childNodes[i].nodeValue + "<br>");
+        }
+	</script>
+</body>
+</html>

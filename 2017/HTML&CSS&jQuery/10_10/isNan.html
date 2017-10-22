@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>isfinite_isNaN</title>
+</head>
+<body>
+	<script>
+		var num = 8 / 0;
+        if (isFinite(num) == false) {
+			document.write("무한대값입니다." + "<br>");
+		}
+		
+        var num2 = 0 / 0;
+        if (isNaN(num2)) {
+			document.write("올바른 숫자가 아닙니다." + "<br>");
+		}
+	</script>
+</body>
+</html>

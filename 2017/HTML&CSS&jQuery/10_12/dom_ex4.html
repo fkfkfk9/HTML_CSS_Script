@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>속성을 가져온다.</title>
+</head>
+<body>
+	<p><img id="goods" src="test.jpg" title="잡동사니" width="300" height="200"/></p>
+	<hr>
+	<script>
+        var img = document.getElementById("goods");
+		var attrs = img.attributes;//이미지의 속성들을 참조
+		for (var i = 0; i < attrs.length;i++) {
+			document.write(i + "번째 속성 이름 = " + attrs[i].name + 
+			", 속성 값 = " + attrs[i].value + "<br>");
+		}
+	</script>
+</body>
+</html>

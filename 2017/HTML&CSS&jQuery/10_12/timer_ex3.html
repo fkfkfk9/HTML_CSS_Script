@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>timer</title>
+</head>
+<body>
+	<script>
+        //일정시간이 경과한 후에 단 1번만 코드가 실행 됨
+		setTimeout(function() {
+            var loading = document.getElementById("loading");
+            loading.innerHTML = "작업이 완료되었습니다.";
+		}, 3000);
+	</script>
+	<p id="loading">3초만 기다리세요.</p>
+</body>
+</html>

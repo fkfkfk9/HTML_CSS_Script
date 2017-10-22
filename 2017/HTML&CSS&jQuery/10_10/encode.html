@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>encode</title>
+</head>
+<body>
+	<script>
+        //url에는 한글이나 특수문자를 사용 할 수 없기 때문에
+        //16진수로 인코딩해서 전달하고 컴퓨터가 디코더를 하게된다.
+		var str = "동/방:신@기";
+        document.write("원본 = " + str + "<br>");
+        var enc = encodeURIComponent(str);
+        document.write("인코딩 = " + enc + "<br>");
+        var dec = decodeURIComponent(enc);
+        document.write("디코딩 = " + dec + "<br>");
+
+        var str2 = "소녀시대";
+        document.write("원본 = " + str2 + "<br>");
+        var enc2 = encodeURIComponent(str2);
+        document.write("인코딩 = " + enc2 + "<br>");
+        var dec2 = decodeURIComponent(enc2);
+        document.write("디코딩 = " + dec2 + "<br>");
+	</script>
+</body>
+</html>

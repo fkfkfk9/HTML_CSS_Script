@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>splice</title>
+</head>
+<body>
+	<script>
+        /*
+        splice()메서드 : 삽입 삭제를 하는 기능
+        */
+
+		// 삽입만 하기
+        var arr = [1, 3, 5, 7, 9, 11, 13, 21];
+        //splice의 첫번째 숫자 2는 배열에서 작업할 위치
+        //두번째 0은 삽입을 하겠다는 의미
+        //그 다음 숫자는 입력되는 값들
+		arr.splice(7, 0, 15, 17, 19);
+		document.write("arr = " + arr + "<br>");
+		
+		// 삭제만 하기
+        var arr = [1, 3, 5, 7, 9, 11, 13, 15];
+        //앞의 숫자는 지우기 시작할 위치
+        //뒤의 숫자는 위치부터 지워질 숫자 갯수
+		arr.splice(5, 2);
+		document.write("arr = " + arr + "<br>");
+		
+		// 삭제 후 삽입 하기
+        var arr = [1, 3, 5, 7, 9, 11, 13, 15];
+        //앞에 두자리는 지우는것 삭제 후 지운자리부터 
+        //뒤의 두 숫자를 채워 넣는다.
+		arr.splice(5, 2, 10, 11);
+		document.write("arr = " + arr + "<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>contents</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>문단 안에 <span>테스트용 스팬</span>이 있습니다.<!--테스트--></p>
+	<script>
+        //children과 비슷하나 텍스트나 주석까지 같이 검색한다는게 다름
+        $('p').contents().filter(function () {
+            alert(this.nodeType);
+            return this.nodeType != 1;
+            //1.엘리먼트 2.속성 3.텍스트
+		}).wrap('<b/>');//태그안을 포장함
+	</script>
+</body>
+</html>

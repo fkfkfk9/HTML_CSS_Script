@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>regexp</title>
+</head>
+<body>
+	<script>
+		var str = "qweq asd234 q-356 Q-123 q-238AH Q-123h q-442AH Q-AH q-224H";
+        var reg = new RegExp("[qQ]-[0-7]*A?H");
+        //첫번째 -는 p-나 P-를 찾는거고 대괄호안의 -는 0~9까지를 의미
+        //*는 0번이상을 의미 0~9까지의 숫자가 여러번 나올 수 있다.
+        //T?는 T가 0번또는 1뻔 들었다는걸 의미
+        var result = reg.exec(str);
+        reg.
+		document.write(result + "<br>");
+	</script>
+</body>
+</html>

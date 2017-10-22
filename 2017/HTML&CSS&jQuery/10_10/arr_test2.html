@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Array Test</title>
+</head>
+<body>
+    <script>        
+        var arr = [[2, 3], [7, 8, 9, 10], [4, 5, 6], [1]];
+        var arr2 = new Array();
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr[i].length; j++) {
+                document.write("arr[" + i + "][" + j + "] = " + arr[i][j] + "<br>");
+                arr2[count] = arr[i][j];
+                count++;
+            }
+        }
+        document.write("------------------------<br>");
+        for (var st in arr2) {
+            document.write("arr2[" + st + "] = " + arr2[st] + " &nbsp;&nbsp;&nbsp;");
+        }
+        document.write("<br>---------------------------------------------------<br>");
+        var k;
+        for (i = 0; i < arr2.length-1; i++) {
+           for (j = (i+1); j < arr2.length; j++) {
+                k = 0;
+                if (arr2[i] > arr2[j]) {
+                    k = arr2[i];
+                    arr2[i] = arr2[j];
+                    arr2[j] = k;
+                }
+            }
+        }
+        for (var st in arr2) {
+            document.write("arr2[" + st + "] = " + arr2[st] + " &nbsp;&nbsp;&nbsp;");
+         }
+    </script>
+</body>
+</html>

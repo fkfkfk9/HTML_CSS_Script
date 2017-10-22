@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>데이터 생성자함수</title>
+</head>
+<body>
+	<script>
+        //시스템의 현재 날짜와 시간정보를 갖게된다.
+		var date = new Date();
+        document.write("toString : " + date.toString() + "<br>");
+        //날짜와 시간정보를 전부 날짜를 영어로
+        document.write("toLocaleDateString : " + date.toLocaleDateString() + "<br>");
+        //날짜만 나오게
+        document.write("toLocaleTimeString : " + date.toLocaleTimeString() + "<br>");
+        //시간만
+        document.write("toLocaleString : " + date.toLocaleString() + "<br>");
+        //날짜와 시간이 모두 나오지만 날짜가 숫자로 표시
+	</script>
+</body>
+</html>

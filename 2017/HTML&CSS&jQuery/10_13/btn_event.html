@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>button call event</title>
+</head>
+<body>
+	<h3 id="hid">클릭하세요</h3>
+	<input type="button" value="click" onClick="hid.onclick()">
+	<script>
+        //이벤트 핸들러로 사용한 버튼에서 호출할 수 있다.
+        var hid = document.getElementById("hid");
+		hid.onclick = function() {
+			alert("클릭했습니다.");
+		}
+	</script>
+</body>
+</html>

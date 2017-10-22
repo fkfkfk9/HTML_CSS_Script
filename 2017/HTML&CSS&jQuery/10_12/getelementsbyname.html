@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getelementsbyname</title>
+</head>
+<body>
+	<p name="pid">테스트용 문장1</p>
+	<p>테스트용 문장2</p>
+	<p name="pid">테스트용 문장3</p>
+	<hr>
+	<script>
+        var pid_arr = document.getElementsByName("pid");
+        document.write("문단 개수 : " + pid_arr.length + "<br>");
+        for (var i in pid_arr) {
+            document.write(i + "번째 문단 : " + pid_arr[i].firstChild.nodeValue + "<br>");
+		}
+	</script>
+</body>
+</html>

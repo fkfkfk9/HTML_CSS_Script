@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>nan</title>
+</head>
+<body>
+	<script>
+        //일반 수학에서는 몱을 0으로 나눌수 없다.
+        //스크립트에선 에러처리가 아닌 Infinity라는 무한의 값을 부여한다.
+		var infi = 1234/0;
+		document.write("Infinity = " + infi + "<br>");
+		//계산할 수 없는 숫자가 나올 때 NaN이 발생한다.
+		var nannum = Math.sqrt(-2);
+		document.write("NaN = " + nannum);
+	</script>
+</body>
+</html>

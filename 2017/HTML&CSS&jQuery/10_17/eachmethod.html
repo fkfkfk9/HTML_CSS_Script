@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>eachmethod</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h2>테스트용 제목0</h2>
+	<h2>테스트용 제목1</h2>
+	<h2>테스트용 제목2</h2>
+	<h2>테스트용 제목3</h2>
+	<h2>테스트용 제목4</h2>
+	<script>
+		var arrCol = ['gold', 'orange', 'lime', 'blue', 'gray'];
+		$.each($('h2'), function(index, item) {
+            $(this).css('background', arrCol[index]);
+        });
+        /*
+            $('h2').each(function(index, item){
+                $(this).css('background', arrCol[index]);
+            });
+        */
+	</script>
+</body>
+</html>

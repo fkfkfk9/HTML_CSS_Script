@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>filter</title>
+</head>
+<body>
+	<script>
+        var score = [88, 99, 33, 55, 8, 77, 100, 68, 45, 23];
+        var score2 = score.filter(function (arr_num) {
+            return arr_num >= 80;
+        });
+        //맵과 비슷한 용도로 사용하지만 리턴값이 불리언값이어야 한다.
+		document.write("score2  = " + score2 + "<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>btn_css</title>
+    <style>
+        .fb { font-size: 2em; }
+        .fi { font-style: italic; }
+        .fb { font-weight: bold; }
+        .fc { text-align: center; }
+
+        .btn {
+            width: 150px;
+            height: 70px;
+            background-color: #FF6A00;
+            border: 10px solid #FFFFFF;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #A9A9A9;
+        }
+
+        .btn > a {
+            display: block;
+            /* 해당 div와 같게 height를 맞추면 수직으로 가운대로 맞춰준다.  */
+            line-height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <a href="#" class="fb fi fb fc">Click</a>
+    </div>
+</body>
+</html>

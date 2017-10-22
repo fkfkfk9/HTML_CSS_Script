@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getelementsbytagname2</title>
+</head>
+<body>
+	<ul id="halo">
+		<li>인류</li>
+		<li>코버넌트</li>
+		<li>플러드</li>
+	</ul>
+	<ol>
+		<li>트와이스</li>
+		<li>블랙핑크</li>
+	</ol>
+	<hr>
+	<script>
+        var halo = document.getElementById("halo");
+        var childs = halo.getElementsByTagName("li");
+        //ul안의 li를 전부 가져오려면 ul만 id로 지정해줘도 된다.
+		for (var li in childs) {
+			document.write(li + "번째 목록 : " + childs[li].firstChild.nodeValue + "<br>");
+		}
+	</script>
+</body>
+</html>

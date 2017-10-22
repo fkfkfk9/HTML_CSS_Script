@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>appendchild 기존 태그에 추가 </title>
+</head>
+<body>
+	<div id="div"><p>테스트용 문단 1</p><p>테스트용 문단 2</p><p>테스트용 문단 3</p></div>
+	<script>
+		var pid = document.createElement("p");
+        var str = document.createTextNode("추가된 테스트용 문단");
+        pid.appendChild(str);
+		
+		var div = document.getElementById("div");
+        div.insertBefore(pid, div.childNodes[2]);
+	</script>
+</body>
+</html>

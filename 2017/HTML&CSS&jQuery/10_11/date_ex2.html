@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>date format</title>
+</head>
+<body>
+	<script>
+		var date = new Date();
+		document.write("현재 시간은 " + date.getFullYear() + "년 " + 
+            (date.getMonth()+1) + "월 " + date.getDate() + "일 " +
+            date.getHours() + ":" + date.getMinutes() + "입니다.");
+        //월은 0부터 시작해서 1을 더해줘야 현재 월이 출력된다.
+	</script>
+</body>
+</html>

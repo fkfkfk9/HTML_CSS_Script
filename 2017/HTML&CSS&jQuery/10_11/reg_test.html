@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>reg_test</title>
+</head>
+<body>
+	<script>
+		var str = "881103-1234567";
+		var result = str.search(/[0-9]{6}-[1234][0-9]{6}/);
+		if (result != -1) {
+			document.write("유효한 주민 등록 번호입니다.");
+		} else {
+			document.write("주민 등록 번호가 올바르지 않습니다.");
+		}
+	</script>
+</body>
+</html>

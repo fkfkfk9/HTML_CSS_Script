@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Math Random</title>
+</head>
+<body>
+	<script>
+		document.write("무작위 수 : " + Math.random() + "<br>");
+        document.write("1~10 사이 : " + Math.floor(Math.random() * 10) + "<br>");
+        //floor 은 직전 정수값을 준다. 즉 소수에서 소수값을 없애고 내림연산을 한다.
+        document.write("로또 당첨 번호 : ");
+        
+        for (var i = 0; i < 6; i++) {
+            document.write(Math.floor(Math.random() * 45) + " ");            
+        }        
+        document.write(" + " + Math.floor(Math.random() * 45));
+       
+	</script>
+</body>
+</html>
+   

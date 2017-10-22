@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>timer</title>
+</head>
+<body>
+	<p id="now">현재 시간</p>
+	<script>
+		setInterval(function() {
+            document.getElementById("now").innerHTML = 
+				(new Date()).toLocaleString();}, 1000);
+	</script>
+    <input type="button" value="STOP" onclick="clearInterval(timer)" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>parseint test</title>
+</head>
+<body>
+	<script>
+        //Number함수보다 paserInt함수가 더 기능이 강력함
+        //Number은 문자가 들어있으면 변환이 안됨
+        //paserInt는 문자가 들어있어도 변환
+		document.write('Number("100") : ' + Number("100") + "<br>");
+		document.write('Number("100개") : ' + Number("100개") + "<br>");
+		document.write('parseInt("100개") : ' + parseInt("100개") + "<br>");
+		document.write('Number("3.1415") : ' + Number("3.1415") + "<br>");
+        document.write('Number("3.14원주율") : ' + Number("3.14원주율") + "<br>");
+        document.write('parseInt("3.14원주율") : ' + parseInt("3.14원주율") + "<br>");
+		document.write('parseFloat("3.14원주율") : ' + parseFloat("3.14원주율") + "<br>");
+	</script>
+</body>
+</html>

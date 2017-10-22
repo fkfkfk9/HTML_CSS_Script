@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>attrmethod</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>그림<img />이다.</p>
+	<hr />
+	<script>
+        //속성을 배열식으로 여러가지 설정 가능
+        //css와 마찬가지로 익명함수도 사용 가능
+        $('img').attr({
+            src: 'test.jpg',
+            width: 300,
+            title: 'Goods',
+            als: 'Goods'
+        }); 
+        document.write($('img').attr('src'));
+        //속성을 없앤다.
+        $('img').removeAttr('title');
+	</script>
+</body>
+</html>

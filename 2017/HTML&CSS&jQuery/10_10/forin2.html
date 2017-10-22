@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>for in</title>
+</head>
+<body>
+	<script>
+        var arr = [88, 77, 33, 13, 27, 99, 58];
+		delete(arr[3]);
+		arr["수석"] = 100;
+        for (var i in arr) {
+            if (isNaN(i)) {
+                document.write(i + " 학생의 성적 : " + arr[i] + "<br>");
+            } else {
+                document.write((Number(i) + 1) + "번째 학생의 성적 : " + arr[i] + "<br>");		
+            }            	
+		}
+		document.write("--------<br>");
+		for (var i = 0; i < arr.length; i++) {
+            document.write((Number(i) + 1) + "번째 학생의 성적 : " + arr[i] + "<br>");			
+		}
+	</script>
+</body>
+</html>

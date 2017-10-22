@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>keyup</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>하고 싶은 말을 하세요</p>
+	<textarea id="taid" style="width:150px ;height:70px;"></textarea>
+	<p>남은 글자:<span id="spanid">50</span></p>
+	<script>
+        $('#taid').keyup(function () {
+            var spanidnum = 50 - $(this).val().length;
+            $('#spanid').html(spanidnum);
+        });
+        $('#taid').keydown(function () {
+            if ($(this).val().length == 50) {
+                $('#taid').attr('disabled', true);
+            }
+        });
+	</script>
+</body>
+</html>

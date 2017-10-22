@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>This</title>
+</head>
+<body>
+	<h3 id="hid">Click</h3>
+	<p id="pid">Click</p>
+	<script>
+        function click() {
+            //this는 h1 or p 클릭시 클릭된 태그를 가리킴
+            //즉 넘어오는 매개변수를 의미함
+			this.innerHTML += "<br>클릭했습니다.";
+		}
+        var hid = document.getElementById("hid");
+        hid.onclick = click;
+        var pid = document.getElementById("pid");
+        pid.onclick = click;
+	</script>
+</body>
+</html>

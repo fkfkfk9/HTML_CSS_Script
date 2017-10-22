@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>유효성 검사</title>
+</head>
+<body>
+	<form id="scoreform">
+		<label for="subject">과목</label>
+		<input type="text" id="subject"><br/>
+		<label for="score">점수</label>
+		<input type="number" id="score"><br/>
+		<input type="submit">
+		<input type="reset">
+	</form>
+	<script>
+        var scoreform = document.getElementById("scoreform");
+        //폼에서 서브밋 기능이 발생되었을때의 이벤트
+		scoreform.onsubmit = function() {
+            var score = document.getElementById("score").value;
+            if (document.getElementById("subject").value == "") {
+                alert("과목을 적지 않았습니다.");
+                document.getElementById("subject").focus();
+                return false;
+            }
+            if (score == "") {
+                alert("점수를 적지 않았습니다.");
+                document.getElementById("score").focus();
+                return false;
+            }
+            if (score < 0 || score > 100) {
+                alert("점수 범위가 잘못되었습니다.");
+                document.getElementById("score").focus();
+                return false;
+            } else if (score >= 90 && score <= 100) {
+                alert("A학점 입니다.")
+            } else if (score >= 80 && score <= 89) {
+                alert("B학점 입니다.")
+            } else if (score >= 70 && score <= 79) {
+                alert("C학점 입니다.")
+            } else if (score >= 60 && score <= 69) {
+                alert("D학점 입니다.")
+            } else if (score < 60) {
+                alert("F학점 입니다.")
+            }
+		}
+	</script>
+</body>
+</html>

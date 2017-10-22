@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>array ex</title>
+</head>
+<body>
+	<script>
+        var arr = [7777, "배열", true, { name: "유종현", age: 30, gender: "남성" }];
+        //배열의 마지막은 json방식 자바 스크립트를 이용하여 데이터를 표현하는 방법 중 하나
+		for (var i = 0; i < arr.length-1; i++) {
+			document.write("arr[" + i + "] =" + arr[i] + "<br>");
+        }
+        //스크립트에서 배열은 다른 데이터 형식도 사용 가능
+        document.write("이름 : " + arr[arr.length-1].name + "<br>");
+        document.write("나이 : " + arr[arr.length-1].age + "<br>");
+        document.write("성별 : " + arr[arr.length-1].gender + "<br>");
+	</script>
+</body>
+</html>

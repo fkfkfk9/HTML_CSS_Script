@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>firstchild</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>레알마드리드 축구선수</p>
+	<ol>
+		<li>호날두
+		<li>벤제마
+		<li>토니 크로스
+		<li>모드리치
+	</ol>
+	<p>바르셀로나 축구선수</p>
+	<ol>
+		<li>리오넬 메시
+		<li>수아레즈
+		<li>뎀벨레
+	</ol>
+	<script>
+        //7개의 li중에 첫번째 li를 선택
+        $('li:first').css('background', 'gold');
+        //부모가 있는 li중 첫번째 자식
+		$('li:first-child').css('border', 'solid 3px orange');
+	</script>
+</body>
+</html>

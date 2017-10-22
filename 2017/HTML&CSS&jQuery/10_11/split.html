@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>split</title>
+</head>
+<body>
+	<script>
+		var contry = "한국,영국,미국,중국";
+        var parts = contry.split(",");
+        //parts = ["한국","영국","미국","중국"];
+        //split는 이런식으로 하나의 문자열을 배열형식으로 바꿔줌
+        //()안의 내용을 빼고 저장 할 수 있다.
+        for (var i in parts) {
+            document.write("도시명 : " + parts[i] + "<br>");
+        }
+        var parts2 = contry.split("국,");
+        for (var j in parts2) {
+            document.write("도시명 : " + parts2[j] + "<br>");
+        }
+	</script>
+</body>
+</html>

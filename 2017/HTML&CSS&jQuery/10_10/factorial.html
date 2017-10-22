@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>factorial</title>
+</head>
+<body>
+	<script>
+        function factorial(n) {
+			if (n == 1) {
+				return 1;
+			} else {
+                return n * factorial(n-1);
+			}
+		}
+        document.write("5! = " + factorial(5) + "<br>");
+	</script>
+</body>
+</html>

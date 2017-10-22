@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>nodevalue</title>
+</head>
+<body>
+	<p id="pid">이것은 <b>문단</b>이다.</p>
+	<hr>
+	<script>
+        var pid = document.getElementById("pid");
+        document.write("nodeValue : " + pid.firstChild.nodeValue + "<br>");
+        //첫번째 자식만 출력
+        document.write("textContent : " + pid.textContent + "<br>");
+        //자식의 후손 텍스트 전부 툴력
+        document.write("innerHTML : " + pid.innerHTML + "<br>");
+        //모든 텍스트의 태그효과까지 적용해서 출력
+        document.write("innerText : " + pid.innerText + "<br>");
+        //태그효과는 빼고 텍스트만 출력 textContent와 같음
+        document.write("outerText : " + pid.outerText + "<br>");
+        //노드안뿐 아니라 노드의 태그까지 읽음
+        alert("outerHTML : " + pid.outerHTML);
+	</script>
+</body>
+</html>

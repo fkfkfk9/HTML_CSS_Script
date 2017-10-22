@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>stringincrease</title>
+</head>
+<body>
+	<script>
+		var num = "8";
+        num++;
+        //typeof(변수or데이터)데이터형을 반환한다.
+        //문자열 a이지만 ++연산을 함으로써 숫자형이 된다.
+		document.write("num = " + num + ", type = " + typeof(num) + "<br>");
+		
+		var num= "9";
+        num += 1;
+        //같은 +1을 해주지만 +가 문자열을 연결하는 용도로 쓰여서 1이 문자열화 된다.
+		document.write("num = " + num + ", type = " + typeof(num) + "<br>");
+		
+		var num= "8";
+        num = num + 1;
+        //2번째와 같이 문자열 형식으로 더함
+        document.write("num = " + num + ", type = " + typeof (num) + "<br>");
+        //++연산을 사용하면 데이터 형과 관계없이 숫자형으로 변환되어 계산된다.
+	</script>
+</body>
+</html>

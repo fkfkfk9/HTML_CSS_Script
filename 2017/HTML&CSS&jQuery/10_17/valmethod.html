@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>valmethod</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<form>
+		<label for="uname">이름</label>
+		<input type="text" id="uname" value="유종현"/><br/>
+		<label for="male">남자</label>
+		<input type="checkbox" id="male" checked /><br/>
+		<label for="intro">소개</label>
+		<textarea id="intro" cols="40" rows="4">경기도 안양시 거주</textarea><br/>
+		<label for="ujob">직업</label>
+		<select id="ujob">
+			<option value="programmer">프로그래머</option>
+			<option value="progammer">프로게이머</option>
+			<option value="whitehand">백수</option>
+		</select><br/>
+		<button type="button" onclick="btnview();">조사하기</button>
+		<button type="button" onclick="btnchange();">이름 변경</button>
+	</form>
+	<script>
+		function btnview() {
+            alert("이름 : " + $('#uname').val() + "\n" + 
+			"남자 : " + $('#male:checked').val() + "\n" + 
+			"소개 : " + $('#intro').val() + "\n" + 
+                "직업 : " + $('#ujob').val());
+		}
+		function btnchange() {
+            $('#uname').val("김유신");
+		}
+	</script>
+</body>
+</html>

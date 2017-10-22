@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>regliteral</title>
+</head>
+<body>
+	<script>
+        var str = "qweq asd234 q-356 Q-123 q-238AH Q-123h q-442AH Q-AH q-224H";
+        var reg = /[qQ]-[0-7]*A?H/;
+		var result = reg.exec(str);
+		document.write(result + "<br>");
+	</script>
+</body>
+</html>

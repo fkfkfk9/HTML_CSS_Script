@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>substring</title>
+</head>
+<body>
+	<script>
+		var str = "010-4590-5395";
+        document.write("substring = " + str.substring(4, 8) + "<br>");
+        //처음 숫자의 위치부터 뒤의 숫자의 위치까지
+        document.write("substr = " + str.substr(4, 4) + "<br>");
+        //처음 숫자의 위치부터 뒤의 숫자갯수만큼
+        //substr은 아직 표준이 아니기 때문에 사용을 안하는 편이 좋다.
+		document.write("slice = " + str.slice(4, 8) + "<br>");
+        document.write("slice = " + str.slice(8, -1) + "<br>");
+        //slice는 substring와 사용법이 같지만 음수도 사용 가능하다.
+        //처음 적은 숫자의 위치부터 음수는 뒤으 위치에서 음수좌표만큼 까지
+	</script>
+</body>
+</html>

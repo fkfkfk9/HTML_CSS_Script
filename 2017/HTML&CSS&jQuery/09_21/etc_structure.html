@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ul css</title>
+    <style>        /*ul태그는 메뉴를 만들때 많이 사용된다*/
+        ul { overflow: hidden; }
+        li {
+            list-style: none; /*블릿을 사라지게 한다.*/
+            float:left; padding: 20px;
+        }
+        /*끝을 원처럼 완만하게 깍는다. */
+        li:first-child { border-radius: 7px 0 0 7px; }
+        li:last-child { border-radius: 0 7px 7px 0; }
+        /*0부터 n에 대입해 수열을 만든다.*/
+        li:nth-child(2n) { background-color: #FF0003; }
+        li:nth-child(2n+1) { background-color:#800000; }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+        <li>네 번째</li>
+        <li>다섯 번째</li>
+        <li>여섯 번째</li>
+        <li>일곱 번째</li>
+    </ul>
+</body>
+</html>

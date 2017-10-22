@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>propmethod</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>그림<img src='test.jpg' width="200" />이다.</p>
+	<hr />
+	<script>
+		document.write($('img').prop('tagName') + '<br />');
+		document.write($('img').prop('nodeName') + '<br />');
+		document.write($('img').prop('nodeType') + '<br />');
+	</script>
+</body>
+</html>

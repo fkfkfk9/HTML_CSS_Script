@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>timer</title>
+</head>
+<body>
+	<p id="now">현재 시간</p>
+	<script>
+		function nowtime() {
+            var now = document.getElementById("now");
+            now.innerHTML = (new Date()).toLocaleString();
+            //재귀호출
+            setTimeout("nowtime()", 1000);
+        }
+        //0초 후 즉 즉시 실행
+        var timer = setTimeout("nowtime()", 0);
+	</script>
+</body>
+</html>

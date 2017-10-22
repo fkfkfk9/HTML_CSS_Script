@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>openclose</title>
+</head>
+<body>
+	<script>
+		var chang;
+		function openchang() {
+            chang = window.open("", "",	"width=600,height=400,resizable=no");
+            chang.document.write("<h1>Hello ROM</h1>");
+            chang.moveTo(80, 140);
+            //자식창을 여는 변수를 통해 자식창을 컨트롤 할 수 있다.
+            //자식창에서 부모창을 컨트롤 할려면 opener.으로 한다.
+		}
+		
+		function movechang() {
+            chang.moveBy(10,10);
+            chang.focus();
+		}
+
+        function closechang() {
+            chang.close();
+		}
+	</script>
+	<input type="button" value="Open" onclick="openchang()" />
+	<input type="button" value="Move" onclick="movechang()" />
+	<input type="button" value="Close" onclick="closechang()" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>half window</title>
+</head>
+<body>
+	<script>
+		var chang;
+		function openChang() {
+			var spec = "width=" + screen.width / 2 + 
+				",height=" + screen.height / 2 +
+				",left=" + screen.width / 4 +//새창의 배치 왼쪽에서 얼마나
+				",top=" + screen.height / 4;//위에서 얼마나 아래에 있나
+            chang = window.open("", "",	spec);
+            chang.document.write("<p>New half Window</p>");
+		}
+	</script>
+	<input type="button" value="New Window" onclick="openChang()" />
+</body>
+</html>

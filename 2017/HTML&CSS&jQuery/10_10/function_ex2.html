@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>함수 사용법</title>
+    <script>
+        function stat(name, age, gender) {
+            document.write(name + "은 나이가 " + age + "살이고, 성별은 " + gender + "이다. <br>");
+        }
+    </script>
+</head>
+<body>
+    <script>
+        name = prompt("이름을 입력해 주세요.", "홍길동");
+        age = prompt("나이를 입력해 주세요.", "500");
+        gender = prompt("성별을 입력해 주세요.", "남성 or 여성");
+        stat(name, age, gender);
+    </script>
+</body>
+</html>

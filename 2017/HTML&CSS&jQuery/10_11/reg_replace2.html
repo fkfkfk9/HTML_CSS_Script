@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>reg_replace</title>
+</head>
+<body>
+	<script>
+		var count = 1;
+        var str = "간장 공장 공장장은 간공장장이고 공장 공장 공장장은";
+		var result = str.replace(/공장/g, function(value) {
+			return value + "(" + count++ + ")";
+		});
+		document.write(str + "<br>");
+		document.write("------------<br>");
+		document.write(result + "<br>");
+	</script>
+</body>
+</html>

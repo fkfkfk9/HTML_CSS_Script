@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Math minmax</title>
+</head>
+<body>
+	<script>
+		var num = Number(prompt("점수를 입력하세요.", "0~100사이"));
+        num = Math.min(100, Math.max(num, 0));
+		///max는 입력받은 두 수중 큰걸 반환해준다.
+		// min은 두 수중에 작은걸 반환한다.
+        //복잡하게 if문을 쓸 필요없이 한줄로 0~100까지로 한정지을 수 있다.
+	
+		document.write("입력한 점수는 " + value + "입니다.<br>");	
+	</script>
+</body>
+</html>

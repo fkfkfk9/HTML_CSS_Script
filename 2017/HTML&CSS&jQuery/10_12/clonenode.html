@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>clonenode</title>
+</head>
+<body>
+	<div id="div"><p>테스트용 문단 1</p><p>테스트용 문단 2</p><p>테스트용 문단 3</p></div>
+	<script>
+		var div = document.getElementById("div");
+		var pid = div.childNodes[0];
+        var newp = pid.cloneNode(true);
+        //true를 넣으면 자손까지 복사한다. 펄스라면 자손은 빼고 본인것만 복사된다.
+        //즉 텍스트는 자손이라 복사가 안된다.
+        div.appendChild(newp);
+	</script>
+</body>
+</html>

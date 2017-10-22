@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>attrselector</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<p>테스트용 문단입니다.</p>
+	<p title="tooltip">타이틀을 가지고 있는 테스트용 문단입니다.</p>
+	<input type="text" />ID
+	<input type="password">PASSWORD
+	<script>
+        //title속성을 가지고 있는 p태그를 선택
+        $('p[title]').css('background', 'gold');
+        //type속성이 password라는 값을 가진 input태그를 선택
+		$('input[type=password]').css('background', 'orange');
+	</script>
+</body>
+</html>

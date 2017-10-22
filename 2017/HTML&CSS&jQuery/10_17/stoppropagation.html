@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>이벤트 하나만 동작</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h2>테스트용 제목 안에 <span>테스트용 스팬</span>이 있다.</h2>
+	<script>
+        //h2안에 span이 있기때문에 span만 클릭해도 둘다 동작하도록
+        //구현되어 있음.
+        //stopPropagation()을 사용함으로서 span이벤트후 
+        //동작하는 h2클릭 이벤트를 동작하지 않게끔 한다.
+        //물론 이후에 h2를 클릭하면 이벤트는 동작한다.
+		$('span').click(function(event) {
+			$(this).css('background', 'gold');
+			event.stopPropagation();
+		});
+		$('h2').click(function(event) {
+			$(this).css('background', 'green');
+		});
+	</script>
+</body>
+</html>

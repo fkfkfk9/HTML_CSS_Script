@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jquerywrap</title>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h1>제목1</h1>
+    <h1 id="hid">제목2</h1>
+    <h1 class="hclass">제목3</h1>
+    <h1>제목4</h1>
+	<script>
+        //DOM 프로그래밍 방식
+		var hteg = document.getElementsByTagName('h1')[0];
+
+        //jQuery문법으로 사용하고자 할때
+        $(hteg).css('background', 'gold');
+        $('h1.hclass').css('background', 'aquamarine');
+	</script>
+</body>
+</html>
