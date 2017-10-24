@@ -2,25 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>funcargument</title>
+	<title>익명함수 기본</title>
 </head>
 <body>
 	<script>
         //익명함수
-		var add = function(a, b) {
-			return a + b;
+		var add = function(num1, num2) {
+			return num1 + num2;
         }
         //익명함수
-		var multi = function(a, b) {
-			return a * b;
+		var multi = function(num1, num2) {
+			return num1 * num2;
         }
         //일반 함수
-        function calc(a, b, f) {//calc(2, 3, add)
+        function calc(num1, num2, func) {//calc(2, 3, add)
         //익명함수의 용도 함수자체를 변수로 함수로 넘길 수 있다.
-			return f(a, b);
+			return func(num1, num2);
 		}
-		document.write("2 + 3 = " + calc(2, 3, add) +"<br>");
-		document.write("2 * 3 = " + calc(2, 3, multi) +"<br>");
+		document.write("8 + 13 = " + calc(8, 13, add) +"<br>");
+		document.write("8 * 13 = " + calc(8, 13, multi) +"<br>");
 	</script>
 </body>
 </html>
