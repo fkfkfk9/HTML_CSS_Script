@@ -17,6 +17,25 @@ create table classes(
 	st_birth	date,
 	st_addr		varchar2(50)
 );
+create table professors(
+	pf_code		number primary key,
+	pf_name		varchar2(20) NOT NULL,
+	dep_code	number REFERENCES department(dep_code),
+	pf_rank		varchar2(20),
+	pf_phone	varchar2(20),
+	pf_birth	date,
+	pf_major	varchar2(30)
+);
+create table subjects(
+	sub_code		number primary key,
+	sub_name		varchar2(50) NOT NULL,
+	dep_code		number REFERENCES department(dep_code),
+	pf_code			number REFERENCES professors(pf_code),
+	pf_phone		varchar2(20),
+	sub_peple		number,
+	sub_credit		number check (sub_credit BETWEEN 1 AND 3),
+	sub_schedule  	varchar2(50)
+);
 
 insert into department
 values (100, '컴퓨터 공학과', '홍길동', '000-000-0000', '1998-11-03');
