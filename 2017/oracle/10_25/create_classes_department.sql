@@ -12,7 +12,8 @@ create table classes(
 	st_code		number primary key,
 	st_name		varchar2(20) NOT NULL,
 	dep_code	number REFERENCES department(dep_code),
-	st_gender	varchar2(20) CHECK ( st_gender IN ('남자', '여자')),
+	st_grade	number,
+	st_gender	varchar2(20) CHECK ( st_gender IN ('남자', '여자')),	
 	st_phone	varchar2(20),
 	st_birth	date,
 	st_addr		varchar2(50)
@@ -37,16 +38,40 @@ create table subjects(
 	sub_schedule  	varchar2(50)
 );
 
+CREATE SEQUENCE SEQ_ST_CODE_07 --07학번용 시퀀스 
+START WITH      20070001 
+INCREMENT BY    1;
+
+CREATE SEQUENCE SEQ_ST_CODE_08 --08학번용 시퀀스 
+START WITH      20080001 
+INCREMENT BY    1;
+
+CREATE SEQUENCE SEQ_ST_CODE_09 --09학번용 시퀀스 
+START WITH      20090001 
+INCREMENT BY    1;
+
+CREATE SEQUENCE SEQ_ST_CODE_10 --10학번용 시퀀스 
+START WITH      20100001 
+INCREMENT BY    1;
+
+CREATE SEQUENCE SEQ_ST_CODE_11 --11학번용 시퀀스 
+START WITH      20110001 
+INCREMENT BY    1;
+
+CREATE SEQUENCE SEQ_DEP_CODE --학과용 시퀀스 
+START WITH      10000 
+INCREMENT BY    100;
+
 insert into department
-values (100, '컴퓨터 공학과', '홍길동', '000-000-0000', '1998-11-03');
+values (SEQ_DEP_CODE.nextval, '컴퓨터 공학과', '홍길동', '000-000-0000', '1998-11-03');
 insert into department (dep_code, dep_name, dep_call, create_date)
-values (200, '모바일 소프트웨어', '010-001-1111', '2007-03-01');
+values (SEQ_DEP_CODE.nextval, '모바일 소프트웨어', '010-001-1111', '2007-03-01');
 insert into department (dep_code, dep_name, dean_name, create_date)
-values (300, '정보보호', '알파고', sysdate);
+values (SEQ_DEP_CODE.nextval, '정보보호', '알파고', sysdate);
 insert into classes
-values (20070001, '유종현', '200', '남자', '010-4590-5395','1988-11-03',
+values (SEQ_ST_CODE_07.nextval, '유종현', 10200, 3.8,'남자', '010-4590-5395','1988-11-03',
 '경기도 안양시 동안구');
-insert into classes (st_code, st_name, dep_code, st_gender)
-values (20070002, '박지성', '100', '남자');
-insert into classes (st_code, st_name, dep_code, st_gender, st_birth, st_addr)
-values (20070003, '김태희', '200', '여자', '1980-01-01','서울시');
+insert into classes (st_code, st_name, dep_code, st_grade, st_gender)
+values (SEQ_ST_CODE_07.nextval, '박지성', 10100, 2, '남자');
+insert into classes (st_code, st_name, dep_code, st_grade, st_gender, st_birth, st_addr)
+values (SEQ_ST_CODE_07.nextval, '김태희', 10200, 4.5, '여자', '1980-01-01','서울시');
