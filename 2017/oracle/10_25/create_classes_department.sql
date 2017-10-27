@@ -75,3 +75,19 @@ insert into classes (st_code, st_name, dep_code, st_grade, st_gender)
 values (SEQ_ST_CODE_07.nextval, '박지성', 10100, 2, '남자');
 insert into classes (st_code, st_name, dep_code, st_grade, st_gender, st_birth, st_addr)
 values (SEQ_ST_CODE_07.nextval, '김태희', 10200, 4.5, '여자', '1980-01-01','서울시');
+
+CREATE OR REPLACE PROCEDURE pr_new_department
+        ( p_dep_name    IN department.dep_name%TYPE,
+          p_dean_name   IN department.dean_name%TYPE,
+          p_dep_call    IN department.dep_call%TYPE,
+          p_create_date IN department.create_date%TYPE )
+IS
+BEGIN
+    INSERT INTO department
+    values(SEQ_DEP_CODE.nextval, p_dep_name, p_dean_name, p_dep_call, p_create_date);
+    commit;
+end;
+
+exec pr_new_department('게임 공학과', '블리자드', '001-123-4567', '2005-01-01');
+exec pr_new_department('VR', '', '011-146-7345', sysdate);
+select * from department;
