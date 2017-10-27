@@ -78,7 +78,7 @@ DECLARE
    v_out VARCHAR2(10) := 'out test'; --내용을 넣었지만 out이기 때문에 값전달은 안됨
    v_in_out VARCHAR2(20) := 'in and out test';
 BEGIN
-	 my_parameter_test_proc (v_in, v_out, v_in_out);
+	 p_in_out_test (v_in, v_out, v_in_out);
 	 
 	 DBMS_OUTPUT.PUT_LINE('v_out value = ' || v_out);
 	 DBMS_OUTPUT.PUT_LINE('v_in_out value = ' || v_in_out);
