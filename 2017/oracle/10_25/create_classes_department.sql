@@ -1,3 +1,5 @@
+drop table subjects;
+drop table professors;
 drop table classes;
 drop table department;
 
@@ -37,6 +39,13 @@ create table subjects(
 	sub_credit		number check (sub_credit BETWEEN 1 AND 3),
 	sub_schedule  	varchar2(50)
 );
+
+drop sequence SEQ_ST_CODE_07;
+drop sequence SEQ_ST_CODE_08;
+drop sequence SEQ_ST_CODE_09;
+drop sequence SEQ_ST_CODE_10;
+drop sequence SEQ_ST_CODE_11;
+drop sequence SEQ_DEP_CODE;
 
 CREATE SEQUENCE SEQ_ST_CODE_07 --07학번용 시퀀스 
 START WITH      20070001 

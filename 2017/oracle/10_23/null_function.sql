@@ -20,10 +20,6 @@ SELECT num, NVL2(readnum, title || '[' || readnum || ']' , title || '[0]') as ti
     expr1이 널이면 expr2반환 expr2이 널이면 expr3이 반환.....
 */  
 select NULL * 10 from dual;--널과 연산하면 결과는 널이된다.
-SELECT employee_id, salary, commission_pct, --COALESCE응용 
-       COALESCE (salary + salary * commission_pct, salary) AS salary2
-  FROM employees;--commission_pct이 널이면 결과는 널이되고 아니면 salary값만 리턴
-  
 select COALESCE(NULL,NULL,NULL) from dual;--끝까지 널이면 결국 널
 select COALESCE(1,NULL,NULL) from dual;--처음부터 널값이 아니므로 1 리턴
 select COALESCE(NULL,NULL,1) from dual;--마지막 값이 1이므로 1리턴
