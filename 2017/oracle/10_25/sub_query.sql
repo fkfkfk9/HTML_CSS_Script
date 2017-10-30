@@ -28,3 +28,14 @@ select st_name, ST_GRADE
 from CLASSES
 where ST_GRADE > any(1.0, 2.0, 3.0);
 --any는 3중에 제일 작은값 결과는 1.0보다 큰것을 구한다.
+--update나 delete에서도 사용 가능
+UPDATE CLASSES
+   SET ST_GRADE = ( SELECT AVG(ST_GRADE)
+                    FROM CLASSES );
+select * from CLASSES;
+
+DELETE CLASSES
+ WHERE ST_GRADE >= ( SELECT AVG(ST_GRADE)
+                    FROM CLASSES );                    
+ROLLBACK;           
+
