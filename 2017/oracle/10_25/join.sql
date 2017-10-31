@@ -34,4 +34,14 @@ where dep_code IS NULL;
 select c.st_code, c.st_name, c.st_grade, d.dep_name 
 from classes c INNER JOIN department d
 on c.dep_code = d.dep_code;
+-- 3개 조인 -------------------------------------
+select * --일반적인 3개 조인
+from classes c, department d, professors p
+where e.dep_code = d.dep_code
+and d.dep_code = p.dep_code;
+select * --ansi로 3개 조인
+from 
+    classes c 
+        inner join department d on c.dep_code = d.dep_code 
+        inner join professors p on d.dep_code = p.dep_code;
 --------------------------------------------------------------------------------

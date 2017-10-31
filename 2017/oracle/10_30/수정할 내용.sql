@@ -1,14 +1,3 @@
----------------------------------- 3개 조인 ------------------------------------- 25일
-select * --일반적인 3개 조인
-from employees e, departments d, job_history j
-where e.department_id = d.department_id
-and d.department_id = j.department_id;
-select * --ansi로 3개 조인
-from 
-    employees e 
-        inner join departments d on e.department_id = d.department_id 
-        inner join job_history j on d.department_id = j.department_id;
---------------------------------------------------------------------------------
 --특정 부서의 평균연봉보다 높은 부서 구하고 평균연봉 표시 --25일 연관성없는 서브쿼리 추가
 select department_id, avg(salary)
 from employees
