@@ -40,6 +40,7 @@ create table subjects(
 	sub_credit		number check (sub_credit BETWEEN 1 AND 3),
 	sub_schedule  	varchar2(50)
 );
+
 -------------------------------------------------------------------
 drop sequence SEQ_ST_CODE_07;
 drop sequence SEQ_ST_CODE_08;
@@ -71,6 +72,7 @@ INCREMENT BY    1;
 CREATE SEQUENCE SEQ_DEP_CODE --학과용 시퀀스 
 START WITH      10000 
 INCREMENT BY    100;
+
 --------------------------------------------------------------------------
 insert into department
 values (SEQ_DEP_CODE.nextval, '컴퓨터 공학과', '홍길동', '000-000-0000', '1998-11-03');
@@ -92,6 +94,11 @@ insert into professors values(10201, '오삼권', 10200, '전임교수', '019-12
 insert into professors values(10101, '임성락', 10100, '전임교수', '017-365-8794',
 '1955-04-12', '운영체제');
 -----------------------------------------------------------------------------------------
+insert into subjects 
+values(101, '안드로이드 프로그래밍', 10100, 10101, '017-365-8794', 40, 3, '화요일 6~9');
+insert into subjects 
+values(201, 'TCP/IP 소켓 프로그래밍', 10200, 10201, '019-123-7532', 30, 3, '목요일 1~3');
+------------------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE pr_new_department
         ( p_dep_name    IN department.dep_name%TYPE,
           p_dean_name   IN department.dean_name%TYPE,
