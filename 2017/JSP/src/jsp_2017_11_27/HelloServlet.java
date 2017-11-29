@@ -1,4 +1,4 @@
-package Test;
+package jsp_2017_11_27;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloServlet
  */
+/*JSP는 뷰가 주목적 서블릿은 기능이 주목적 JSP는 HTML에 자바소스를 넣는 느낌이라면
+  서블릿은 자바소스에 HTML코드를 넣는 느낌 */
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

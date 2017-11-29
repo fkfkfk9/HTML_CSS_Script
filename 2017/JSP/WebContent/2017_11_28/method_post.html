@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Post 방식 예제</title>
+</head>
+<body>
+	<!-- get방식을 사용하게 된다면 주소로 데이터를 보내기 때문에 용량의 한계가 있고 보안성이 안좋음
+		 하지만 간단한 데이터나 인덱스용 데이터를 보내기에는 편하다. 
+		 이처럼 주소뒤에 붙는 데이터를 쿼리스트링이라고 한다. -->
+	<form action="/2017_11_28/st" method="post">
+		아이디 : <input type="text" name="userid" /><br/>
+		비  번 : <input type="password" name="userpw" /><br/>
+		<input type="submit" value="전송"/> 
+	</form>
+</body>
+</html>
