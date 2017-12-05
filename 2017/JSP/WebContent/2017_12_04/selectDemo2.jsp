@@ -12,7 +12,7 @@
 	<body>
 		<table border = "1">
 			<tr>
-				<th>아이디</th><th>이름</th>
+				<th>아이디</th><th>이름</th><th>비고</th><th>삭제</th>
 			</tr>
 			<%
 				Connection conn = null;
@@ -38,7 +38,11 @@
 						<tr>
 						<td><%=member.getId() %></td>						
 						<td><a href="selectDetail.jsp?id=<%=member.getId() %>">
-						<%=member.getName() %></a></td>						
+						<%=member.getName() %></a></td>	
+						<td><a href="updateForm.jsp?id=<%=member.getId() %>">
+						수정</a></td>		
+						<td><a href="dbdelete.jsp?id=<%=member.getId() %>">
+						삭제</a></td>										
 						</tr>
 					<% }
 				}catch(SQLException e){

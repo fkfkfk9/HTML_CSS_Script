@@ -20,7 +20,7 @@
 	    <input name="addr" type="text" required><br>
 	    <label for="tel">전화번호</label>
 	    <input name="tel" type="text" required><br>
-	    <input type="submit" value="로그인">
+	    <input type="image" src="login_button.png">
     </form>
 </body>
 </html>
