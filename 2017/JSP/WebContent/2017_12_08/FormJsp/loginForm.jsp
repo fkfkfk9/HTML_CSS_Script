@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <script src="/study/2017_12_08/js/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-<script src="/study/2017_12_08/js/register.js"></script>
+<script src="/study/2017_12_08/js/login.js"></script>
 
 <%
 String id ="";

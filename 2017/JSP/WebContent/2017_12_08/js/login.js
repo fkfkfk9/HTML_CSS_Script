@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 	//회원가입 버튼 클릭시 익명함수
 	$('#register').click(function(){
-		$("article").load("FormJsp/registerForm.jsp");
+		$("#contents").load("FormJsp/registerForm.jsp");
 	});//END Register ---------------------------------------------------->
 		
 	$('#login').click(function(){//login이라는 id를 가지고 있는것을 클릭하였을때 작동
