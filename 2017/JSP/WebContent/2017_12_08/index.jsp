@@ -11,8 +11,10 @@
     <!-- css파일을 불러온다. -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- JQuery를 불러온다. -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="/study/2017_12_08/js/jquery-3.2.1.min.js"></script>
+    <!-- Login 페이지에서 사용되는 스크립트를 불러온다. -->
+    <script src="/study/2017_12_08/js/login.js"></script>
+    
 </head>
 <body>
     <!-- 레이아웃이 들어갈 블럭을 만든다. -->

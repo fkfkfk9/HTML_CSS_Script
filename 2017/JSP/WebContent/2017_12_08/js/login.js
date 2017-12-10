@@ -3,8 +3,8 @@ var status = true;
 $(document).ready(function(){
 	
 	//회원가입 버튼 클릭시 익명함수
-	$("#register").click(function(){
-		$("#main_auth").load("registerForm.jsp");
+	$('#register').click(function(){
+		$("article").load("FormJsp/registerForm.jsp");
 	});//END Register ---------------------------------------------------->
 		
 	$('#login').click(function(){//login이라는 id를 가지고 있는것을 클릭하였을때 작동
@@ -17,12 +17,11 @@ $(document).ready(function(){
 			//json문법표현 var 변수명 = {key : value, key : value };			
 			$.ajax({
 				type:"POST",
-				url:"/Hyundai2/LoingCheck",
+				url:"/study/LoingCheck",//학원 Hyundai2  집 study
 				data:jsonv,
-				success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.
-					alert(data + "가 리턴되었습니다.");
+				success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.					
 					if(data == 1){
-						$("#contens").load("loginForm.jsp");
+						$("#contents").load("FormJsp/loginForm.jsp");
 						//로그인이 성공한다면 #main_auth위치에 loginForm.jsp을 출력한다.
 					}else if(data == 0){
 						alert("비밀번호가 틀렸습니다.");

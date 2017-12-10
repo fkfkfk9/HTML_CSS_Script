@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="/study/2017_12_08/js/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+<script src="/study/2017_12_08/js/register.js"></script>
 
 <%
 String id ="";
@@ -12,18 +14,21 @@ try{
 %>
 
 <%if(id == null || id.equals("")){ //인증되지 않은 사용자 영역%>
-  <div class="form_ul">
+  <div class="formlogin">
      <ul>
      	<li><h2>로그인을 하셔야 이용 가능합니다.</h2></li>
         <li><label for="id">아이디</label>
             <input id="id" name="id" type="email" size="20" 
               maxlength="50" placeholder="fkfkfk9@naver.com">
+        </li>
         <li><label for="passwd">비밀번호</label>
             <input id="passwd" name="passwd" type="password" 
               size="20" placeholder="6~16자 숫자/문자" maxlength="16">
+        </li>
         <li>
             <button id="login">로그인</button>
             <button id="register">회원가입</button>
+        </li>
      </ul>
   </div>
 <%}else{//인증된 사용자 영역%>
