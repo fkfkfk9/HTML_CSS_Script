@@ -10,8 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css파일을 불러온다. -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <!-- JQuery를 불러온다. -->
-    <script src="/study/2017_12_08/js/jquery-3.2.1.min.js"></script>
+    <!-- JQuery를 불러온다. 집/study/ 학원 /Hyundai2/-->
+    <script src="/Hyundai2/2017_12_08/js/jquery-3.2.1.min.js"></script>
+    <script src="/Hyundai2/2017_12_08/js/customer.js"></script>
     
 </head>
 <body>
@@ -25,7 +26,7 @@
         <!-- 네비게이션 메뉴 부분이다. -->
         <nav>            
             <ul>
-                <li><a id="select" href="index.html">HOME<br /></a></li>
+                <li><a id="select" href="index.jsp">HOME<br /></a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">WEB</a>
                     <div class="dropdown-content">
@@ -37,6 +38,13 @@
                 </li>                
                 <li><a href="#">ORACLE<br /></a></li>
                 <li><a href="#">JAVA<br /></a></li>
+                <li class="dropdown" id="customer" >
+                    <a href="javascript:void(0)" class="dropbtn">고객지원</a>
+                    <div class="dropdown-content">
+                        <a id="logout">로그아웃</a>
+                        <a id="updatemember">회원정보변경</a>
+                    </div>
+                </li>       
             </ul>
         </nav>
         <script>

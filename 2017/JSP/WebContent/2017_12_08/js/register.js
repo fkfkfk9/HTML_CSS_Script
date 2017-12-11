@@ -9,7 +9,7 @@ $(document).ready(function(){
 			//json문법표현 var 변수명 = {key : value, key : value };			
 			$.ajax({
 				type:"POST",
-				url:"/study/IdCheck",//학원 Hyundai2  집 study
+				url:"/Hyundai2/IdCheck",//학원 Hyundai2  집 study
 				data:jsonv,
 				success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.					
 					if(data == 1){
@@ -46,7 +46,7 @@ $(document).ready(function(){
 				
 			$.ajax({
 				type:"POST",
-				url:"/study/InsertMember",//학원 Hyundai2  집 study
+				url:"/Hyundai2/InsertMember",//학원 Hyundai2  집 study
 				data:jsonv,
 				success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.	
 					if(data == 1){

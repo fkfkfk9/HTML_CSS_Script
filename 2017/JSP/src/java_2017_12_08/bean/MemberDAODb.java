@@ -10,8 +10,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import crypt.BCrypt;
-import crypt.SHA256;
+import work.crypt.BCrypt;//work.
+import work.crypt.SHA256;
 
 public class MemberDAODb {
 	final int CONFIRM = 1;//db작업이 정상 처리되었을때
@@ -24,6 +24,7 @@ public class MemberDAODb {
 		작업3 회원 인증
 		작업4 아이디 중복 체크
 		작업5 회원가입 정보 insert
+		작업6 ID로 본인정보 가져오기
 	*/
 	
 	//작업1 Singleton Start-------------------->
@@ -39,7 +40,8 @@ public class MemberDAODb {
 		//DBCP Pool API
 		Context con = new InitialContext();
 		Context envcon = (Context)con.lookup("java:comp/env");
-		DataSource ds = (DataSource)envcon.lookup("jdbc/jspstudy");
+		DataSource ds = (DataSource)envcon.lookup("jdbc/jsptest");
+		//jspstudy는 집 학원 : jsptest
 		return ds.getConnection();
 	}
 	/*END DB Connection------------------------------*/
@@ -144,4 +146,12 @@ public class MemberDAODb {
 		return result;
 	}
 	/*END 회원가입 정보 insert -------------------------*/
+	
+	/*작업6 ID로 본인정보 가져오기 -------------------------*/
+	String sql = "";//sql문을 정의하기 위한 변수
+	
+	Connection conn = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	/*END ID로 본인정보 가져오기 --------------------------*/
 }

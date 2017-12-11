@@ -6,14 +6,21 @@
 <!-- Login 페이지에서 사용되는 스크립트를 불러온다. 학원 /Hyundai2/ 집 /study/-->
 <script src="/Hyundai2/2017_12_08/js/register.js"></script>
 
-  <div class="formjoin">
+<% String id = (String)session.getAttribute("id");//로그인이 되었는지 확인한다. %>
+<%
+	
+%>
+<% if(id.equals("") || id == null) {//로그인이 되어있지 않은경우%>
+<script>window.location.href("index.jsp");</script>
+<%}else{//로그인이 되어있는경우 %>
+
+  <div class="formupdate">
      <ul>
-     	<li><h2>회원가입</h2></li>
-        <li id="id_li">
+     	<li><h2><%=id %>님 정보수정</h2></li>
+        <li>
         	<label for="id">아이디</label>
             <input id="id" name="id" type="email" size="20" 
               maxlength="50" placeholder="fkfkfk9@naver.com">
-            <button id="id_check">중복확인</button>
         </li>
         <li>
         	<label for="passwd">비밀번호</label>
@@ -40,5 +47,5 @@
      	</li>
      </ul>
   </div>
-
+<% } %>
     
