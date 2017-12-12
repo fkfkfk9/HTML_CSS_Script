@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% request.setCharacterEncoding("utf-8");%>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- JQuery를 불러온다. 집/study/ 학원 /Hyundai2/-->
     <script src="/Hyundai2/2017_12_08/js/jquery-3.2.1.min.js"></script>
-    <script src="/Hyundai2/2017_12_08/js/dropdown.js"></script>
+    <script src="/Hyundai2/2017_12_08/js/customer.js"></script>
     
 </head>
 <body>
@@ -27,7 +27,6 @@
         <nav>            
             <ul>
                 <li><a id="select" href="index.jsp">HOME<br /></a></li>
-                <li><a id="notice">공지사항<br /></a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">WEB</a>
                     <div class="dropdown-content">
@@ -36,8 +35,9 @@
                         <a href="#">JAVASCRIPT</a>
                         <a href="#">JQUERY</a>
                     </div>
-                </li>                                
-                <li><a id="freeboard">자유게시판<br /></a></li>
+                </li>                
+                <li><a href="#">ORACLE<br /></a></li>
+                <li><a href="#">JAVA<br /></a></li>
                 <li class="dropdown" id="customer" >
                     <a href="javascript:void(0)" class="dropbtn">고객지원</a>
                     <div class="dropdown-content">

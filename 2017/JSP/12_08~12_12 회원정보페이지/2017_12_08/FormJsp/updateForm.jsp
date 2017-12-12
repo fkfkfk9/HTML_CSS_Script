@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 <!-- Login 페이지에서 사용되는 스크립트를 불러온다. 학원 /Hyundai2/ 집 /study/-->
 <script src="/Hyundai2/2017_12_08/js/updateDelete.js"></script>
-<% request.setCharacterEncoding("utf-8");%>
+
 <% String id = (String)session.getAttribute("id");//로그인이 되었는지 확인한다. %>
 <%
 	MemberDAODb mdao = MemberDAODb.getInstance();

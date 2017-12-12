@@ -1,0 +1,10 @@
+#list_article{
+	background-color: #a0d1f1;
+	margin-bottom: 5%;
+    margin-left:5%;
+    border-bottom: 1px solid #000000;
+}
+#list_article p{
+	text-align: center;
+	padding-top: 5%;
+}
