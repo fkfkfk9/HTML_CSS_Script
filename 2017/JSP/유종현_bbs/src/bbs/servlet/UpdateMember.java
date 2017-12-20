@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java_2017_12_08.bean.MemberBeanDb;
-import java_2017_12_08.bean.MemberDAODb;
+import bbs.member.bean.MemberBeanDb;
+import bbs.member.bean.MemberDAODb;
 
 /**
  * Servlet implementation class UpdateMember

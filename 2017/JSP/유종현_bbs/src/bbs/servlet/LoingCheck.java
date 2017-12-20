@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.websocket.Session;
 
-import java_2017_12_08.bean.MemberDAODb;
+import bbs.member.bean.MemberDAODb;
 
 /**
  * Servlet implementation class LoingCheck

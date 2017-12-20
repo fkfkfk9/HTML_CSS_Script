@@ -63,6 +63,7 @@ public class WriteBoard extends HttpServlet {
 		bbd.setSubject(request.getParameter("subject"));
 		bbd.setPasswd(request.getParameter("passwd"));
 		bbd.setReg_date(new Timestamp(System.currentTimeMillis()));
+		bbd.setRef(Integer.parseInt(request.getParameter("ref")));
 		bbd.setRe_step(Integer.parseInt(request.getParameter("re_step")));
 		bbd.setRe_level(Integer.parseInt(request.getParameter("re_level")));
 		bbd.setContent(request.getParameter("content"));

@@ -14,9 +14,9 @@ import work.crypt.BCrypt;//work.
 import work.crypt.SHA256;
 
 public class MemberDAODb {
-	static final int CONFIRM = 1;//db작업이 정상 처리되었을때
-	static final int NOPASS = 0;//패스워드가 틀린경우
-	static final int NOID = -1;//아이디가 틀린경우
+	static public final int CONFIRM = 1;//db작업이 정상 처리되었을때
+	static public final int NOPASS = 0;//패스워드가 틀린경우
+	static public final int NOID = -1;//아이디가 틀린경우
 	/*
 		목차
 		작업1 Singleton Start

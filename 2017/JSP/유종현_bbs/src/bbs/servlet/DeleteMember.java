@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import java_2017_12_08.bean.MemberDAODb;
+import bbs.member.bean.MemberDAODb;
 
 /**
  * Servlet implementation class DeleteMember

@@ -2,7 +2,7 @@ var status = true;
 
 $(document).ready(function(){
 	
-	$("#writecontents").click(function(){
+	$("#updatecontents").click(function(){
 		checkIt();
 		
 		if(status){
@@ -10,28 +10,29 @@ $(document).ready(function(){
 			var query = {
 					   subject:$("#subject").val(),
 				       content:$("#content").val(),
-				       passwd:$("#passwd").val(),
-				       ref:$("#ref").val(),
-				       re_step:$("#re_step").val(),
-				       re_level:$("#re_level").val(),
+				       passwd:$("#passwd").val(),				       
 				       num:$("#num").val()
 			};//END JOSN------------------------------->
 			$.ajax({
 	  		     type: "POST",
-	  		     url: "/Hyundai2/WriteBoard",
+	  		     url: "/Hyundai2/UpdateBoard",
 	  		     data: query,
 	  		     success: function(data){
-	  		    	 if(data == 1){//글추가 성공
-	  		    		 alert("글이 등록되었습니다.");
+	  		    	 if(data == 1){//글수정 성공
+	  		    		 alert("글이 수정되었습니다.");
 	  		    		 var query = "Jsp/freeBoard.jsp?pageNum="+pageNum;
 	  		    		 $("#contents").load(query);
-	  		    	 }else alert("죄송합니다. 서버에 문제가 생겼습니다.");
+	  		         }else if(data == 0){	  		        	 
+	  		        	 alert("암호가 틀렸습니다. 다시 입력해주세요.");
+	  		        	 $("#passwd").val("");
+	  		        	 $("#passwd").focus();
+	  		     	 }else alert("죄송합니다. 서버에 문제가 생겼습니다.");
 	  		     }
 	  		  });//END AJAX---------------------------------------->
 		}//END IF------------------------------------------------->
 	});//저장버튼 클릭이벤트 --------------------------------------------------->	
 	
-	$("#cancle").click(function(){
+	$("#u_cancle").click(function(){
 		var pageNum = $("#hidden_pageNum").val();
     	var query = "Jsp/freeBoard.jsp?pageNum="+pageNum;
 		$("#contents").load(query);

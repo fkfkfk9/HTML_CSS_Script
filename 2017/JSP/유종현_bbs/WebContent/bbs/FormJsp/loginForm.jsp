@@ -3,7 +3,7 @@
 <% request.setCharacterEncoding("utf-8");%>    
 <!-- js 파일 불러오기 -->
 <script src="/Hyundai2/bbs/js/login.js"></script>
-<!-- 학원 /Hyundai2/ 집 /study/ -->
+<!-- 학원 /Hyundai2/ 집 /study/ 본인 프로젝트명으로 수정 -->
 
 <%
 String id ="";
@@ -13,9 +13,8 @@ try{
 	id = (String)session.getAttribute("id");
 %>
 
-<%if(id == null || id.equals("")){ //인증되지 않은 사용자 영역%>
-  <div class="formlogin">
-  
+<%if(id == null || id.equals("")){ //인증되지 않은 사용자 영역 즉 로그인이 안된경우%>
+  <div class="formlogin">  
      <ul>
      	<li><h2>로그인을 하셔야 이용 가능합니다.</h2></li>
      	<li><label for="id"><span class="spancss">아이디</span></label>
@@ -33,10 +32,10 @@ try{
         </li>   
      </ul>
   </div>
-  <script>
+  <script><%-- 로그인이 되지 않을경우 고객지원 텝을 숨긴다. --%>
    $('#customer').hide();
   </script>
-<%}else{//인증된 사용자 영역%>
+<%}else{//인증된 사용자 영역 즉 로그인이 되어있을 때%>
   <h2><%=id %>님 환영합니다. </h2>
   <p>HTML&CSS, JAVASCRIPT&JQUERY, ORACLE, JAVA는 현재 서울현대직업전문학교에서 교육받으며 실습한 코드</p>
   <br /><br />
@@ -47,7 +46,7 @@ try{
   <p>ORACLE은 DB에 대한 기본적인 내용과 SQL구문, PL_SQL구문을 실습</p>
   <br /><br />
   <p>JAVA는 기본적인 자바 문법과 이클립스 사용법, 객체지향 프로그래밍에 대한 내용을 실습</p>
-  <script>
+  <script><%-- 로그인이 되면 고객지원 텝을 보여준다. --%>
    $('#customer').show();
   </script>
 <%}}catch(Exception e){e.printStackTrace();}%>

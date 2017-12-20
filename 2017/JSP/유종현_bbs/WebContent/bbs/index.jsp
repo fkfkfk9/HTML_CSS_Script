@@ -11,7 +11,7 @@
     <!-- css파일을 불러온다. -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/html_css_styles.css" />
-    <!-- JQuery를 불러온다. 집/study/ 학원 /Hyundai2/-->
+    <!-- JQuery를 불러온다. 집/study/ 학원 /Hyundai2/ 본인 프로젝트명을 적는다.-->
     <script src="/Hyundai2/bbs/js/jquery-3.2.1.min.js"></script>
     <script src="/Hyundai2/bbs/js/dropdown.js"></script>
     
@@ -53,7 +53,7 @@
         </script>
         <!-- 본문 부분 -->
         <section>
-            <!-- 본문의 내용이 들어간다. -->
+            <!-- 본문의 내용이 들어간다. JQuery에서 load되는 부분-->
             <article id ="contents">
             	<jsp:include page="FormJsp/loginForm.jsp"/>                
             </article>

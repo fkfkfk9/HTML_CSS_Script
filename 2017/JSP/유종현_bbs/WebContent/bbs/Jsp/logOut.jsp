@@ -5,5 +5,5 @@
 	session.setAttribute("id", ""); 
 %>
 <script>
-	window.location.href("index.jsp");
+	window.location.assign("index.jsp");
 </script>

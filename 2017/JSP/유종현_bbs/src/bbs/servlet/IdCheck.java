@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java_2017_12_08.bean.MemberDAODb;
+import bbs.member.bean.MemberDAODb;
 
 /**
  * Servlet implementation class IdCheck

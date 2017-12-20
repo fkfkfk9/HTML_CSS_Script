@@ -45,3 +45,8 @@
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 }
+#jump.w1, .w2{/*페이징 버튼*/
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}

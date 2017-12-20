@@ -2,7 +2,7 @@ var status = true;
 var check_stat = true;
 
 $(document).ready(function(){
-	$("#id_check").click(function(){
+	$("#id").blur(function(){//포커스가 벗어났을때		
 		if($.trim($("#id").val())){
 			check_stat = true;
 			var jsonv = {id : $("#id").val()};
@@ -51,7 +51,7 @@ $(document).ready(function(){
 				success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.	
 					if(data == 1){
 						alert("회원가입 성공! 로그인 해주세요.");
-						window.location.href("index.jsp");
+						window.location.assign("index.jsp");
 					}else{ alert("회원가입 실패 나중에 다시 시도해 주세요.");}
 				}//end 리턴함수 -------------------------------->
 			});//end ajax---------------------------------------->

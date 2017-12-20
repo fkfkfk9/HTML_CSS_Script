@@ -10,8 +10,7 @@
         <li id="id_li">
         	<label for="id"><span class="spancss">아이디</span></label>
             <input id="id" name="id" type="email" size="20" 
-              maxlength="50" placeholder="fkfkfk9@naver.com">
-            <button id="id_check">중복확인</button>
+              maxlength="50" placeholder="fkfkfk9@naver.com">            
         </li>
         <li>
         	<label for="passwd"><span class="spancss">비밀번호</span></label>

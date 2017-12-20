@@ -10,7 +10,7 @@ $(document).ready(function(){
 			success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.					
 				if(data == 1){
 					alert("삭제성공");
-					window.location.href("index.jsp");
+					window.location.assign("index.jsp");
 				}else if(data == -1){
 					alert("삭제에 실패하였습니다. 나중에 다시 시도해주십시오.")
 				}//end else-------------------->
@@ -36,7 +36,7 @@ $(document).ready(function(){
 				success:function(data){//data는 리턴값 변수 서블릿의의 결과를 받는다.	
 					if(data == 1){
 						alert("회원 정보가 수정되었습니다.");
-						window.location.href("index.jsp");
+						window.location.assign("index.jsp");
 					}else{ alert("정보수정 실패 실패 나중에 다시 시도해 주세요.");}
 				}//end 리턴함수 -------------------------------->
 			});//end ajax---------------------------------------->

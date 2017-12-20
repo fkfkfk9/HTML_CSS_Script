@@ -13,7 +13,6 @@
 <% if(id.equals("") || id == null) {//로그인이 되어있지 않은경우%>
 <script>window.location.href("index.jsp");</script>
 <%}else{//로그인이 되어있는경우 %>
-
   <div class="formupdate">
      <ul>
      	<li><h2><%=id %>님 정보수정</h2></li>
