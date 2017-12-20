@@ -18,6 +18,7 @@ public class ObjectOutInputDemo {
 		fd.num = 13;
 		fd.team = "맨유";
 		oos.writeObject(fd);
+		
 		oos.flush(); oos.close(); fos.close();	
 		
 		FileInputStream fis = new FileInputStream("C:/Users/user/Desktop/javaFile/obTest.dat");
@@ -32,10 +33,13 @@ public class ObjectOutInputDemo {
 }
 
 class FbData implements Serializable{
+	
+	private static final long serialVersionUID = 3742106962446614932L;
 	public String name;
 	public int num;
 	public String team;
-	
+	//이 메서드는 부모클래스의 객체 직렬화를 위해 사용한다 지금처럼 부모클래스의 멤버가 없을때는 
+	//사용하지 않아도 된다.
 	private void writeObject(ObjectOutputStream oos) throws IOException {
 		oos.defaultWriteObject();//본인의 객체데이터를 전부 아웃풋 스트림에 넣어 작성
 		//만약에 부모클래스의 변수가 있었다면 그건 따로 저장해줘야한다
