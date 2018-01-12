@@ -1,33 +1,33 @@
-#list_article{/*�����Խ����� ul�κ�*/
+#list_article{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 ul占싸븝옙*/
 	background-color: #a0d1f1;
 	margin-bottom: 1%;
     margin-left:5%;
     border-bottom: 1px solid #000000;
 }
-#list_article p{/*�����Խ��ǿ� ul�ȿ��� p�±׸� ����ϴ� ���*/
+#list_article p{/*占쏙옙占쏙옙占쌉쏙옙占실울옙 ul占싫울옙占쏙옙 p占승그몌옙 占쏙옙占쏙옙求占� 占쏙옙占�*/
 	text-align: center;
 	padding-top: 5%;
 }
-#write_btn{/*���� �Խ��� �۾����� ��ư�� �����ϴ� li��*/
+#write_btn{/*占쏙옙占쏙옙 占쌉쏙옙占쏙옙 占쌜억옙占쏙옙占쏙옙 占쏙옙튼占쏙옙 占쏙옙占쏙옙占싹댐옙 li占쏙옙*/
 	padding-left: 20% 
 }
-#write_form_ul{/*�۾��� ������ ul*/
+#write_form_ul{/*占쌜억옙占쏙옙 占쏙옙占쏙옙占쏙옙 ul*/
 	background-color: #a0d1f1;
 	width:60%;
 }
-#li_subject{/*�۾��� ������ ������ li*/
+#li_subject{/*占쌜억옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 li*/
 	padding-top: 50px;
 }
-.article_ul{/*�����Խ����� ul*/
+.article_ul{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 ul*/
 	border-top: 1px solid;
 	padding: 5px 0px 5px 0px;
 	margin: 0px;
 }
-.write_date{/*�����Խ����� ul�� ��¥*/
+.write_date{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 ul占쏙옙 占쏙옙짜*/
 	float:right;
 	color:gray;
 }
-.writer_sbuject{/*�����Խ����� ul�� ����*/
+.writer_sbuject{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 ul占쏙옙 占쏙옙占쏙옙*/
 	font-style: italic;
 	color:#db6a0f;
 	font-size: 13px;
@@ -37,21 +37,21 @@
 .writer_sbuject a:visited {text-decoration: none; color:#db6a0f}
 .writer_sbuject a:active {text-decoration: none; color:#db6a0f}
 
-.writer_id{/*�����Խ����� ul�� ���̵�*/
+.writer_id{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 ul占쏙옙 占쏙옙占싱듸옙*/
 	float:left;
 	width: 10%;
 }
-.write_pre{/*�����Խ����� ul�� ��������*/
+.write_pre{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 ul占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙*/
 	margin-top: 0px;
 	padding-bottom:0px;
 	margin-bottom:0px;
 	padding-left: 10%; 
 }
-.write_li{/*�����Խ����� id, ��¥, ������ ����ִ� ���� li*/
+.write_li{/*占쏙옙占쏙옙占쌉쏙옙占쏙옙占쏙옙 id, 占쏙옙짜, 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙獵占� 占쏙옙占쏙옙 li*/
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 }
-#jump.w1, .w2{/*����¡ ��ư*/
+#jump.w1, .w2{/*占쏙옙占쏙옙징 占쏙옙튼*/
 	padding: 0px;
 	margin: 0px;
 	text-align: center;
@@ -83,4 +83,32 @@
 
 #search_div{
 	float: right;
+}
+
+#replyInput{
+	background-color: #a0d1f1;
+	width: 66%;
+}
+
+.write_date{/*�옄�쑀寃뚯떆�뙋�쓽 ul�쓽 �궇吏�*/ 
+ 	float:right; 
+ 	color:gray; 
+ } 
+#replyList .writer_sbuject{/*�옄�쑀寃뚯떆�뙋�쓽 ul�쓽 �젣紐�*/ 
+ 	color:#000000; 
+ 	font-size: 22px;
+ } 
+ .writer_id{/*�옄�쑀寃뚯떆�뙋�쓽 ul�쓽 �븘�씠�뵒*/ 
+ 	float:left; 
+ 	width: 15%; 
+ }  
+ .replyLi{/*�옄�쑀寃뚯떆�뙋�쓽 id, �궇吏�, �젣紐⑹씠 �뱾�뼱�엳�뒗 �뿴�쓽 li*/ 
+ 	margin-bottom: 0px; 
+ 	padding-bottom: 0px; 
+ 	list-style-type: none;
+ 	border-bottom: 1px solid #db6a0f;
+ 	
+ } 
+#replyList{
+	border-top: 1px solid #db6a0f
 }

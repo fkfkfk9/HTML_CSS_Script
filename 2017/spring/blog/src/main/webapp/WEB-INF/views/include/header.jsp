@@ -5,5 +5,8 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/html_css_styles.css" />
 <!-- JQuery를 불러온다. -->
 <script src="/resources/plugins/jQuery/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 <script src="/resources/js/dropdown.js"></script>
+<script src="/resources/js/create.js"></script>
+<script src="/resources/js/read.js"></script>
  <h1><a href="/">fkfkfk9 CODE학습</a></h1>

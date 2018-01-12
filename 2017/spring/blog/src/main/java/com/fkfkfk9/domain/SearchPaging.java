@@ -17,7 +17,9 @@ public class SearchPaging extends Paging{
 	}
 	@Override
 	public String toString() {
-		return "SearchPaging [searchType=" + searchType + ", keyword=" + keyword + "]";
+		return "SearchPaging [searchType=" + searchType + ", keyword=" + keyword + ", toString()=" + super.toString()
+				+ "]";
 	}
+	
 	
 }

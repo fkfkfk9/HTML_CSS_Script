@@ -6,8 +6,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>fkfkfk9 Blog</title>  
-    <script src="/resources/js/create.js"></script>
+    <title>fkfkfk9 Blog</title>      
 </head>
 <body>
     <!-- 레이아웃이 들어갈 블럭을 만든다. -->
@@ -64,8 +63,47 @@
 				     </ul>
 				  </div>
 			</form>
+			<input type="hidden" id="num" name="num" value="${vo.num}" />
             </article>
-        </section>
+            <article id="replyInput">            	
+           		<div id = "replyadd">
+	           		<h2>댓글 쓰기</h2>
+	           		<ul>
+	           			<li>
+				        	<label for="replyer"><span class="spancss">Writer</span></label>
+				            <input id="replyer" name="replyer" type="text"
+				              size="20" maxlength="20" />
+				        </li>
+				        <li>
+				        	<label for="replytext"><span class="spancss">Reply Text</span></label>
+				            <textarea id="replytext" name="replytext" rows="3" cols="55"></textarea>
+				        </li>
+				        <li><button type="button" onclick="" id="replyAddBtn">ADD REPLY</button></li>				      
+	           		</ul>
+           		</div>           	
+           		<div>
+           			<ul id="replyList">
+           			</ul>
+           		</div>
+           		<div>
+           			<ul class="pagination">
+           			</ul>
+           		</div>	            	
+            </article>
+            <div id='modDiv' style="display: none;">
+				<div class='modal-title'></div>
+				<div>
+					<input type='text' id='replytext'>
+				</div>
+				<div>
+					<button type="button" id="replyModBtn">Modify</button>
+					<button type="button" id="replyDelBtn">DELETE</button>
+					<button type="button" id='closeBtn'>Close</button>
+				</div>
+			</div>
+        </section>        
+        <script src="/resources/js/read.js"></script>
+        
         <!-- 사이트의 정보를 적어준다. -->        
         <footer>
             <jsp:include page="../include/footer.jsp" flush="false" />

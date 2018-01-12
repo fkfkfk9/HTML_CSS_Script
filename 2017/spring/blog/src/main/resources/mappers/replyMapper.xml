@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fkfkfk9.mapper.ReplyMapper">
+	<select id="getlistReply"  resultType="ReplyVO">
+		<![CDATA[
+		SELECT rno, num, replytext, replyer, regdate, updatedate
+          FROM (
+            SELECT rno, num, replytext, replyer, regdate, updatedate
+              , ROW_NUMBER() OVER(ORDER BY rno DESC) board_seq
+          FROM tbl_reply where num=#{num}
+          ) DS
+         WHERE board_seq BETWEEN #{paging.startQuery} AND #{paging.endQuery}
+    	]]>
+	</select>
+	
+	<select id="totalCnt" resultType="int">
+		select count(rno) from tbl_reply where num=#{num}
+	</select>
+	
+	<insert id="create">
+		insert into tbl_reply(rno, num, replytext, replyer) 
+		values(reply_seq.nextval, #{num}, #{replytext}, #{replyer})
+	</insert>
+	
+	<update id="update">
+		update tbl_reply set replytext=#{replytext}, updatedate=sysdate
+		where rno=#{rno}
+	</update>
+	
+	<delete id="delete">
+		delete tbl_reply where rno = #{rno}
+	</delete>
+	
+	
+</mapper>
